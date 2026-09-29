@@ -1,0 +1,1008 @@
+<title>مسار تدريب نجاح العملاء</title>
+<meta charset="UTF-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800&family=Tajawal:wght@400;500;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f7f6f9;
+    --surface:#ffffff;
+    --surface-2:#fbfafc;
+    --border:#e3dfe8;
+    --text:#211c2b;
+    --text-dim:#655f72;
+    --text-faint:#948d9f;
+    --teal:#00A4A6;
+    --teal-ink:#005f60;
+    --teal-tint:#e1f5f5;
+    --purple:#653165;
+    --purple-ink:#3e1d3f;
+    --purple-tint:#f0e6f0;
+    --amber:#B9740F;
+    --amber-ink:#6b4308;
+    --amber-tint:#faf0dd;
+    --neutral-tint:#eeecf2;
+    --shadow: 0 1px 2px rgba(40,25,50,.05), 0 8px 24px -14px rgba(40,25,50,.18);
+    --d1:#00A4A6; --d1t:#e1f5f5;
+    --d2:#2C8C82; --d2t:#e2f2ef;
+    --d3:#653165; --d3t:#f0e6f0;
+    --d4:#B8541F; --d4t:#fbe9df;
+    --d5:#B9740F; --d5t:#faf0dd;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#18151d;
+      --surface:#221e29;
+      --surface-2:#282430;
+      --border:#3a3444;
+      --text:#f1eef5;
+      --text-dim:#b6afc4;
+      --text-faint:#847d94;
+      --teal:#3fc9cb;
+      --teal-ink:#bdf0f0;
+      --teal-tint:#12302f;
+      --purple:#c497c5;
+      --purple-ink:#ecdcec;
+      --purple-tint:#332235;
+      --amber:#e3a34a;
+      --amber-ink:#f7ddb0;
+      --amber-tint:#3a2c14;
+      --neutral-tint:#2c2733;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -14px rgba(0,0,0,.5);
+      --d1:#3fc9cb; --d1t:#12302f;
+      --d2:#59c2ae; --d2t:#132c26;
+      --d3:#c497c5; --d3t:#332235;
+      --d4:#e08a52; --d4t:#3a2416;
+      --d5:#e3a34a; --d5t:#3a2c14;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#18151d;
+    --surface:#221e29;
+    --surface-2:#282430;
+    --border:#3a3444;
+    --text:#f1eef5;
+    --text-dim:#b6afc4;
+    --text-faint:#847d94;
+    --teal:#3fc9cb;
+    --teal-ink:#bdf0f0;
+    --teal-tint:#12302f;
+    --purple:#c497c5;
+    --purple-ink:#ecdcec;
+    --purple-tint:#332235;
+    --amber:#e3a34a;
+    --amber-ink:#f7ddb0;
+    --amber-tint:#3a2c14;
+    --neutral-tint:#2c2733;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px -14px rgba(0,0,0,.5);
+    --d1:#3fc9cb; --d1t:#12302f;
+    --d2:#59c2ae; --d2t:#132c26;
+    --d3:#c497c5; --d3t:#332235;
+    --d4:#e08a52; --d4t:#3a2416;
+    --d5:#e3a34a; --d5t:#3a2c14;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    direction:rtl;
+    font-family:'Tajawal',-apple-system,'Segoe UI',Tahoma,sans-serif;
+    line-height:1.65;
+    font-variant-numeric:tabular-nums;
+  }
+  h1,h2,h3,.display{font-family:'Cairo',-apple-system,'Segoe UI',Tahoma,sans-serif; text-wrap:balance;}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace; direction:ltr; unicode-bidi:isolate;}
+
+  a{color:inherit;}
+  .wrap{max-width:980px;margin:0 auto;padding:28px 20px 80px;}
+
+  /* ===== Header ===== */
+  .masthead{
+    background:linear-gradient(135deg,var(--purple) 0%, var(--teal) 100%);
+    border-radius:20px;
+    padding:34px 32px;
+    color:#fff;
+    box-shadow:var(--shadow);
+    margin-bottom:22px;
+    position:relative;
+    overflow:hidden;
+  }
+  .masthead::after{
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 85% 20%, rgba(255,255,255,.16), transparent 55%);
+    pointer-events:none;
+  }
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace; direction:ltr; unicode-bidi:isolate; display:inline-block;
+    font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+    background:rgba(255,255,255,.16); padding:4px 10px; border-radius:99px;
+    margin-bottom:14px;
+  }
+  .masthead h1{font-size:26px; font-weight:800; margin:0 0 8px; color:#fff;}
+  .masthead p{margin:0; font-size:14.5px; color:rgba(255,255,255,.88); max-width:60ch;}
+  .stat-row{display:flex; gap:10px; flex-wrap:wrap; margin-top:22px; position:relative;}
+  .stat{
+    background:rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.22);
+    border-radius:12px; padding:10px 16px; min-width:96px;
+  }
+  .stat b{display:block; font-family:'Cairo',sans-serif; font-size:20px; font-weight:800;}
+  .stat span{font-size:11.5px; color:rgba(255,255,255,.82);}
+
+  /* ===== Daily template legend ===== */
+  .legend{
+    background:var(--surface); border:1px solid var(--border); border-radius:16px;
+    padding:18px 20px; margin-bottom:22px; box-shadow:var(--shadow);
+  }
+  .legend h2{font-size:14px; margin:0 0 12px; color:var(--text-dim); font-weight:700;}
+  .legend-row{column-count:2; column-gap:28px;}
+  .legend-item{display:flex; align-items:center; gap:8px; font-size:12.5px; color:var(--text-dim); padding:5px 0; break-inside:avoid;}
+  .legend-time{font-family:'IBM Plex Mono',monospace; direction:ltr; unicode-bidi:isolate; color:var(--text-faint); font-size:11.5px;}
+  .legend-dot{width:9px;height:9px;border-radius:3px;flex:none;}
+
+  /* ===== Day tabs ===== */
+  .day-tabs{
+    display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-bottom:22px;
+  }
+  .day-tab{
+    background:var(--surface); border:1.5px solid var(--border); border-radius:14px;
+    padding:12px 10px; text-align:center; cursor:pointer; transition:.15s border-color,.15s transform;
+    font-family:inherit;
+  }
+  .day-tab:hover{transform:translateY(-1px);}
+  .day-tab .num{
+    font-family:'Cairo',sans-serif; font-weight:800; font-size:20px; line-height:1;
+    display:block; margin-bottom:6px; color:var(--dc);
+  }
+  .day-tab .lbl{font-size:11.5px; color:var(--text-dim); display:block; line-height:1.4;}
+  .day-tab.active{border-color:var(--dc); background:var(--dt); box-shadow:var(--shadow);}
+  .day-tab:focus-visible{outline:2px solid var(--dc); outline-offset:2px;}
+
+  /* ===== Day panel ===== */
+  .day-panel{display:none;}
+  .day-panel.active{display:block; animation:fade .25s ease;}
+  @keyframes fade{from{opacity:0; transform:translateY(4px);} to{opacity:1; transform:translateY(0);}}
+  @media (prefers-reduced-motion:reduce){ .day-panel.active{animation:none;} }
+
+  .day-head{
+    display:flex; align-items:center; gap:14px; margin-bottom:18px; padding-inline-start:2px;
+  }
+  .day-head .badge{
+    font-family:'Cairo',sans-serif; font-weight:800; font-size:22px; color:#fff;
+    background:var(--dc); width:48px;height:48px;border-radius:13px;
+    display:flex; align-items:center; justify-content:center; flex:none;
+  }
+  .day-head h2{font-size:20px; margin:0 0 3px; color:var(--text);}
+  .day-head .sub{font-size:13px; color:var(--text-dim); margin:0;}
+
+  .timeline{display:flex; flex-direction:column; gap:12px;}
+
+  .block{
+    background:var(--surface); border:1px solid var(--border); border-radius:16px;
+    padding:18px 20px; box-shadow:var(--shadow);
+    border-inline-start:4px solid var(--block-c, var(--border));
+    display:flex; flex-direction:column; gap:10px;
+  }
+  .block-top{display:flex; align-items:center; gap:10px; flex-wrap:wrap;}
+  .block-time{
+    font-family:'IBM Plex Mono',monospace; direction:ltr; unicode-bidi:isolate;
+    font-size:12.5px; font-weight:600; color:var(--text-dim);
+    background:var(--neutral-tint); padding:3px 10px; border-radius:99px;
+  }
+  .block-kind{
+    font-size:11px; font-weight:700; padding:3px 10px; border-radius:99px;
+    background:var(--chip-bg,var(--neutral-tint)); color:var(--chip-c,var(--text-dim));
+  }
+  .block h3{font-size:16px; margin:2px 0 0; font-weight:700;}
+  .block .lead{font-size:12.5px; color:var(--text-dim); margin:-6px 0 0;}
+
+  .part{margin-top:4px;}
+  .part h4{
+    font-size:12.5px; font-weight:700; color:var(--dc); margin:0 0 8px;
+    display:flex; align-items:center; gap:6px;
+  }
+  .part h4::before{content:"◆"; font-size:9px;}
+  ul.pts{margin:0 0 10px; padding-inline-start:20px;}
+  ul.pts li{margin-bottom:6px; font-size:13.5px;}
+  ul.pts li:last-child{margin-bottom:0;}
+  ul.pts b{color:var(--text);}
+  .flow{
+    display:flex; flex-wrap:wrap; align-items:center; gap:6px; margin:6px 0 10px;
+    font-size:12px; color:var(--text-dim);
+  }
+  .flow .fs{
+    background:var(--neutral-tint); border-radius:8px; padding:5px 10px; font-weight:600; color:var(--text);
+  }
+  .flow .ar{color:var(--text-faint); font-size:11px;}
+
+  .link-btn{
+    display:inline-flex; align-items:center; gap:7px; text-decoration:none;
+    background:var(--dc); color:#fff !important; font-size:12.5px; font-weight:700;
+    padding:8px 14px; border-radius:10px; margin-top:4px; width:fit-content;
+    transition:.15s filter;
+  }
+  .link-btn:hover{filter:brightness(1.08);}
+  .link-btn.ghost{background:transparent; color:var(--dc) !important; border:1.3px solid var(--dc);}
+  .link-row{display:flex; flex-wrap:wrap; gap:8px;}
+
+  .role-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:14px; margin-top:14px;}
+  .role-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:14px;
+    padding:16px 18px; box-shadow:var(--shadow); display:flex; flex-direction:column; gap:9px;
+  }
+  .role-card h3{
+    font-size:13.5px; margin:0; font-weight:700; color:var(--purple);
+    display:flex; align-items:center; gap:6px;
+  }
+  .role-card h3::before{content:"◆"; font-size:9px;}
+  .role-card ul{margin:0; padding-inline-start:18px; display:flex; flex-direction:column; gap:5px;}
+  .role-card ul li{font-size:12.5px; color:var(--text-dim); line-height:1.55;}
+  .role-card ul li b{color:var(--text);}
+
+  .task-box{
+    background:var(--surface-2); border:1px dashed var(--border); border-radius:12px;
+    padding:14px 16px; margin-top:2px;
+  }
+  .task-box .goal{font-size:12.5px; color:var(--text-dim); margin:0 0 10px;}
+  .task-box .goal b{color:var(--purple-ink);}
+  ol.scen{margin:0; padding-inline-start:20px; display:flex; flex-direction:column; gap:9px;}
+  ol.scen li{font-size:13.5px;}
+  ol.scen .ans{display:block; font-size:12px; color:var(--teal-ink); margin-top:2px;}
+
+  .review-note{
+    display:flex; align-items:flex-start; gap:8px; font-size:12.5px; color:var(--text-dim);
+    background:var(--neutral-tint); border-radius:10px; padding:9px 12px;
+  }
+
+  .quiz-box{
+    background:var(--amber-tint); border-radius:12px; padding:14px 16px;
+  }
+  .quiz-box ol{margin:0; padding-inline-start:20px; display:flex; flex-direction:column; gap:7px;}
+  .quiz-box li{font-size:13.5px; color:var(--amber-ink);}
+
+  .oral-box ul{margin:0; padding-inline-start:20px; display:flex; flex-direction:column; gap:7px;}
+  .oral-box li{font-size:13.5px;}
+
+  .no-test{
+    display:flex; align-items:center; gap:10px; color:var(--text-dim); font-size:13px;
+  }
+  .no-test .ic{font-size:18px;}
+
+  footer{
+    text-align:center; font-size:11.5px; color:var(--text-faint);
+    padding:26px 16px 10px; line-height:1.9;
+  }
+
+  @media (max-width:720px){
+    .day-tabs{grid-template-columns:repeat(3,1fr);}
+    .masthead{padding:26px 20px;}
+    .masthead h1{font-size:21px;}
+  }
+  @media (max-width:480px){
+    .day-tabs{grid-template-columns:repeat(2,1fr);}
+    .legend-row{column-count:1;}
+  }
+
+  .task-head{display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-bottom:6px;}
+  .task-code{font-family:'IBM Plex Mono',monospace; direction:ltr; unicode-bidi:isolate; font-size:11.5px; font-weight:600; background:var(--purple-tint); color:var(--purple-ink); padding:2px 9px; border-radius:99px;}
+  .task-title{font-size:13.5px; font-weight:700; color:var(--text);}
+  .task-stack{display:flex; flex-direction:column; gap:10px;}
+  .ph{display:inline-flex; align-items:center; gap:6px; font-size:12px; color:var(--text-faint); border:1.3px dashed var(--border); border-radius:10px; padding:6px 12px; margin-top:8px; width:fit-content;}
+  .path{display:flex; flex-wrap:wrap; align-items:center; gap:5px; font-size:11.5px; color:var(--text-dim); background:var(--surface-2); border:1px solid var(--border); border-radius:9px; padding:6px 10px; margin:2px 0 8px; width:fit-content; max-width:100%;}
+  .path b{color:var(--teal-ink); font-weight:700;}
+  .fixed-task{background:var(--teal-tint); border:1px solid transparent; border-radius:12px; padding:12px 16px;}
+  .fixed-task .task-code{background:var(--teal); color:#fff;}
+  .res-table-wrap{overflow-x:auto;}
+  table.res{width:100%; border-collapse:collapse; font-size:12.5px; min-width:520px;}
+  table.res th{text-align:start; font-weight:700; color:var(--text-dim); padding:8px 10px; border-bottom:1.5px solid var(--border); font-size:11.5px;}
+  table.res td{padding:8px 10px; border-bottom:1px solid var(--border); vertical-align:top;}
+  table.res td a{color:var(--teal-ink); font-weight:600; text-decoration:none;}
+  table.res td a:hover{text-decoration:underline;}
+  .day-chip{display:inline-block; font-family:'Cairo',sans-serif; font-weight:800; font-size:11.5px; color:#fff; background:var(--dc); border-radius:6px; padding:1px 8px; margin-inline-end:4px;}
+  .final-quiz{background:var(--amber-tint); border-radius:12px; padding:14px 16px; margin-top:4px;}
+  .final-quiz h4{margin:0 0 8px; font-size:13px; color:var(--amber-ink);}
+  .final-quiz ol{margin:0; padding-inline-start:20px; display:flex; flex-direction:column; gap:6px;}
+  .final-quiz li{font-size:13px; color:var(--amber-ink);}
+</style>
+
+<div class="wrap">
+
+  <div class="masthead">
+    <span class="eyebrow">CSM · Rewaa · Training Track</span>
+    <h1>برنامج تدريب موظف نجاح العملاء</h1>
+    <p>خطة تدريبية مدتها خمسة أيام عمل مبنية على بوابة نجاح العملاء، تتدرّج من التعريف بالشركة ودور الموظف، إلى أدوات العمل اليومية، فمراحل التفعيل، فالخدمات المالية والتجارية، وتنتهي بإعادة التفعيل وإدارة الحالات ومعايير الجودة. يتعلّم المتدرب في كل جلسة مضمون المصدر المعرفي، وكيفية الوصول إليه من البوابة، وكيفية استخدامه مع العميل.</p>
+    <div class="stat-row" id="stats"></div>
+  </div>
+
+  <div class="legend">
+    <h2>هيكل اليوم التدريبي الثابت</h2>
+    <div class="legend-row">
+      <div class="legend-item"><span class="legend-time">09:00</span><span class="legend-dot" style="background:var(--amber)"></span>اختبار (من اليوم الثاني)</div>
+      <div class="legend-item"><span class="legend-time">09:30</span><span class="legend-dot" style="background:var(--teal)"></span>الجلسة التدريبية الأولى</div>
+      <div class="legend-item"><span class="legend-time">11:00</span><span class="legend-dot" style="background:var(--purple)"></span>استراحة الظهر/الصلاة + مراجعة + تاسكات</div>
+      <div class="legend-item"><span class="legend-time">13:30</span><span class="legend-dot" style="background:var(--teal)"></span>الجلسة التدريبية الثانية</div>
+      <div class="legend-item"><span class="legend-time">15:00</span><span class="legend-dot" style="background:#9c96a8"></span>استراحة</div>
+      <div class="legend-item"><span class="legend-time">16:00</span><span class="legend-dot" style="background:var(--purple)"></span>تاسكات + التاسك الثابت: حضور الويبينار</div>
+      <div class="legend-item"><span class="legend-time">17:00</span><span class="legend-dot" style="background:var(--amber)"></span>الجلسة التدريبية الثالثة (الختامية): مراجعة + شفهي + أسئلة</div>
+    </div>
+  </div>
+
+  <nav class="day-tabs" id="dayTabs"></nav>
+  <main id="dayPanels"></main>
+
+  <div class="link-row" style="margin-top:22px;justify-content:center">
+      <a class="link-btn" style="--dc:var(--purple)" href="https://fyousef-2023.github.io/CSM-PORTAL/" target="_blank" rel="noopener">🔗 بوابة نجاح العملاء</a>
+    </div>
+
+  <footer>
+    إعداد: قسم الجودة — فريق نجاح العملاء &nbsp;|&nbsp; رِواء<br>
+    مرجع تدريبي مبني على بوابة نجاح العملاء — النسخة 2.0
+  </footer>
+</div>
+
+<script>
+const P = 'https://fyousef-2023.github.io/';
+const RES = {
+  portal:{label:'بوابة نجاح العملاء', url:P+'CSM-PORTAL/', path:['الصفحة الرئيسية']},
+  platformIntro:{label:'مقدمة وتأهيل منصة رِواء', url:'https://scribehow.com/o/RP0ycIc3SFOSm8rov-EIkg/page/mqdmh_wtahyl_lmnsh_rwaa__Kmel96usRmG1o_ezZuopJQ', path:['المصادر المعرفية','بقية المصادر المعرفية']},
+  helpCenter:{label:'مركز المساعدة — Help Center', url:'https://help.rewaa.com/ar-SA', path:['المصادر المعرفية','بقية المصادر المعرفية']},
+  youtube:{label:'قناة رِواء على يوتيوب', url:'https://www.youtube.com/@RewaaTechnology/playlists', path:['المصادر المعرفية','بقية المصادر المعرفية']},
+  csmRole:{label:'دور موظف نجاح العملاء', url:P+'CSM-Role/', path:['الدور والالتزامات']},
+  calendar:{label:'الالتزام بالجدول اليومي والتحديثات', url:P+'calendar/', path:['الدور والالتزامات']},
+  crm:{label:'نظام إدارة علاقات العملاء — CRM', url:'https://crm.zoho.com/crm/org709483323/tab/Accounts/custom-view/4412475000000087515/list', path:['البرامج والأدوات']},
+  metabase:{label:'قاعدة بيانات العملاء — Metabase', url:'https://bi-internal.platform.rewaatech.com/dashboard/9109-merchant-profile-dashboard', path:['البرامج والأدوات']},
+  adminPanel:{label:'Admin Panel', url:'https://admin.platform.rewaatech.com/accounts/list', path:['البرامج والأدوات']},
+  documentation:{label:'الالتزام بالتوثيق', url:P+'documentation/', path:['الدور والالتزامات']},
+  maqsam:{label:'Maqsam', url:'https://portal.maqsam.com/sign-in', path:['البرامج والأدوات','Maqsam']},
+  tagGuide:{label:'دليل التاج', url:P+'Tag/', path:['البرامج والأدوات','Maqsam']},
+  tagging:{label:'الالتزام بالتاج', url:P+'Tagging/', path:['الدور والالتزامات']},
+  cx3:{label:'3CX', url:'https://rewaa-tech.3cx.ae/#/people', path:['البرامج والأدوات']},
+  callCheck:{label:'الالتزام بالمكالمة — Call Checklist', url:P+'-CSM-Call-Checklist/', path:['الدور والالتزامات']},
+  chat:{label:'الالتزام بالرد والتعامل مع المحادثات', url:P+'chat/', path:['الدور والالتزامات']},
+  quickReplies:{label:'دليل الردود السريعة — Open CX', url:'https://docs.google.com/spreadsheets/d/1rnUH9_MxW3TWzqNzVJdiSH9AE3U1gHnpN2uBnJBQFGA/edit?gid=0#gid=0', path:['المصادر المعرفية','بقية المصادر المعرفية']},
+  stages:{label:'مراحل التفعيل', url:P+'CSM_Stages/', path:['المصادر المعرفية','التفعيل']},
+  onboarding:{label:'رحلة أتمتة الإعداد', url:P+'Onboarding-Automation/', path:['المصادر المعرفية','التفعيل']},
+  product:{label:'رفع المنتجات', url:P+'Product/', path:['المصادر المعرفية','التفعيل']},
+  training:{label:'دليل التدريب الشامل', url:P+'Training/', path:['المصادر المعرفية','التفعيل','التدريب']},
+  devicesPrice:{label:'أسعار الأجهزة الجديدة', url:'https://docs.google.com/spreadsheets/d/1DSDjrcTG-pEnnJM0PN98v1MIajgEv3bsp-lKoiSy9GI/edit', path:['المصادر المعرفية','التفعيل','الأجهزة']},
+  devicesTrack:{label:'تتبع شحنة الأجهزة', url:'https://torod.co/ar/order/tracking/1EpEBSie', path:['المصادر المعرفية','التفعيل','الأجهزة']},
+  rewaaPay:{label:'رِواء باي — RewaaPay', url:P+'RewaaPay/', path:['المصادر المعرفية','التفعيل']},
+  invoice:{label:'فاتورة الاشتراك', url:P+'Invoice/', path:['المصادر المعرفية','التفعيل']},
+  pkgRewaa:{label:'باقات رِواء', url:'https://docs.google.com/spreadsheets/d/1Q8OzseapsSu_fvMd17344ITtiJaM0nru5pcbRRE_bog/edit?gid=0#gid=0', path:['المصادر المعرفية','الباقات']},
+  pkgMazaya:{label:'باقات مزايا ومنشآت', url:'https://docs.google.com/spreadsheets/d/10bHxn4LEatHGz632ARZuOhelO5fNHqvp7XegbSJWUDg/edit', path:['المصادر المعرفية','الباقات']},
+  pkgOld:{label:'الباقات القديمة', url:'https://docs.google.com/spreadsheets/d/1xg93EOiVY-5Q-NUfYh2G4aH_gNvV-fgcnf3bsWCPd2k/edit?gid=688925703#gid=688925703', path:['المصادر المعرفية','الباقات']},
+  grubtech:{label:'دليل عملاء Grubtech', url:P+'Grubtech_CSM_Guide/', path:['المصادر المعرفية','التفعيل']},
+  zatca:{label:'دعم الفوترة الإلكترونية — 2,500 ريال', url:P+'Zatca/', path:['المصادر المعرفية','برامج الدعم والحوافز']},
+  monshaat:{label:'دعم مزايا (منشآت) — 1,500 ريال', url:P+'monshaat/', path:['المصادر المعرفية','برامج الدعم والحوافز']},
+  cashback:{label:'كاش باك من رِواء', url:P+'Cashback/', path:['المصادر المعرفية','برامج الدعم والحوافز']},
+  frill:{label:'منصة الاقتراحات — Frill', url:'https://rewaa.frill.co/b/6vrw5e0l/feature-ideas', path:['البرامج والأدوات','منصة الاقتراحات']},
+  frillChannel:{label:'قناة تقييم الأفكار #new-ideas-frill', url:'https://rewaatech.slack.com/archives/C09L1GE1CL9', path:['البرامج والأدوات','منصة الاقتراحات']},
+  reactivation:{label:'إعادة التفعيل', url:P+'Reactivation/', path:['المصادر المعرفية','إعادة التفعيل']},
+  cases:{label:'دليل إدارة الحالات', url:P+'CasesV2/', path:['المصادر المعرفية','إدارة الحالات']},
+  caseFollow:{label:'الالتزام بإدارة الحالات', url:P+'CaseFollow/', path:['الدور والالتزامات']},
+  nps:{label:'تقييم NPS العالمي', url:'https://docs.google.com/document/d/1KqWFCuq4a_yS1yQZZy956dPUiQ71gbqn816GaMN3Jdo/edit?tab=t.0#heading=h.2gt4uk9n01mo', path:['المصادر المعرفية','قريباً']},
+  sop:{label:'SOP — إجراءات العمل الموحّدة', url:'https://rewaa-cx-portal-frontend-3u9n.onrender.com/sop-builder/', path:['المصادر المعرفية','قريباً']},
+  quality:{label:'معايير جودة التعامل مع العملاء', url:P+'CSM_Quality_Criteria_Interactive/', path:['الالتزام والجودة']},
+  task1_1:{label:'تاسك 1.1 — التسجيل في منصة رِواء', url:'https://docs.google.com/document/d/1TtAYS1c4922FY_E3n3kaRSWmJcSMiPceKIkes5Plyl8/edit?tab=t.0', path:[]},
+  task1_2:{label:'تاسك 1.2 — رِواء أكاديمي', url:'https://docs.google.com/document/d/12hjN6pgksaqL8E6GJOgpua5MvU-yjfRpBKtUnoxScKo/edit?tab=t.0', path:[]},
+  task1_3:{label:'تاسك 1.3 — البدء في منصة رِواء', url:'https://docs.google.com/document/d/1eSRks7AjMMDlV9CLhSgc2UqrJnBV1xtxXruy33KgKMc/edit?tab=t.0', path:[]},
+  taskWebinar:{label:'تاسك الويبينار', url:'https://docs.google.com/document/d/1XH-PopR3B21T5oKHTQmQbwfcFPoLT-O6sf4J1KPf8rE/edit?tab=t.0', path:[]},
+  webinarLive:{label:'رابط التسجيل بالويبينار', url:'https://s.rewaa.com/webinars-training/', path:['المصادر المعرفية','التدريب','دليل التدريب الشامل']},
+  webinarDrive:{label:'مجلد الجلسات المسجلة', url:'https://drive.google.com/drive/folders/1J9dUikBIglojA4HnFrphd-ZHBxc3OWUr', path:['المصادر المعرفية','التدريب','دليل التدريب الشامل']},
+};
+
+const FIXED = {code:'ثابت', title:'التاسك الثابت اليومي — حضور الويبينار', fixed:true,
+  goal:'حضور الويبينار (المباشر أو المسجل) والتطبيق العملي على محتواه، مع تسجيل أي أسئلة أو استفسارات تظهر أثناء التطبيق ومحاولة البحث عن إجاباتها من المصادر المتاحة.',
+  links:[RES.taskWebinar, RES.webinarLive, RES.webinarDrive]};
+
+const DAYS = [
+{
+  num:1, c:'--d1', t:'--d1t',
+  titleAr:'رِواء ودور موظف نجاح العملاء', titleEn:'Rewaa, the CSM Role & the Portal',
+  blocks:[
+    {type:'session', time:'09:00–11:00', title:'الجلسة التدريبية الأولى', subtitle:'الترحيب والتعارف + التعرف على رِواء ومنصتها ومصادر التعلّم الذاتي',
+      parts:[
+        {h:'الترحيب والتعارف', items:[
+          'تعارف بين المتدربين والمدرب، ونبذة عن قسم نجاح العملاء وقسم الجودة والتدريب ودوره في مرافقة الموظف.',
+          'توضيح آلية البرنامج: خمسة أيام، ثلاث جلسات يومياً، تاسكات تطبيقية متعددة، اختبار صباحي من اليوم الثاني، واختبار شفهي في ختام كل يوم.'
+        ]},
+        {h:'مقدمة وتأهيل منصة رِواء', items:[
+          'منصة رِواء منصة سحابية حديثة تساعد المنشآت على إدارة منتجاتها ومخزونها وعملياتها التشغيلية، ويمكن الوصول إليها من أي مكان وفي أي وقت عبر الإنترنت.',
+          'يغطي المصدر: التعريف بالشركة ورؤيتها ورسالتها وخدماتها، ورِواء أكاديمي، ومتطلبات التشغيل الدنيا، وأنواع الاشتراكات والباقات، وخطوات إنشاء الحساب وتسجيل الدخول.',
+          '<b>كيف يستخدمه الموظف:</b> مرجع أول عند سؤال العميل عن متطلبات تشغيل المنصة أو خطوات إنشاء الحساب.'
+        ], links:[RES.platformIntro]},
+        {h:'مصادر التعلّم الذاتي للموظف والعميل', items:[
+          '<b>مركز المساعدة:</b> المركز الرسمي لمقالات ودلائل استخدام المنصة، ويُحدَّث باستمرار من قسم تجربة العميل. يُستخدم للبحث عن إجابة أي سؤال تشغيلي، ولإرسال رابط المقال المناسب للعميل.',
+          '<b>قناة رِواء على يوتيوب:</b> قوائم تشغيل تعليمية وتعريفية بمنتجات رِواء وخدماتها، تُرسل للعميل عندما يكون الشرح المرئي أوضح له من المقال.'
+        ], links:[RES.helpCenter, RES.youtube]}
+      ]},
+
+    {type:'break-task', time:'11:00–13:30', title:'استراحة الظهر والصلاة + وقت حر للاطلاع + تاسكات',
+      review:'وقت حر للاطلاع على مصدر «مقدمة وتأهيل منصة رِواء» وتصفّح مركز المساعدة وقناة يوتيوب.',
+      tasks:[
+        {code:'1.1', title:'التسجيل في منصة رِواء', goal:'التسجيل في منصة رِواء، والاطلاع على تفاصيل تحديث عملية التسجيل والدخول، وفهم التغييرات الجديدة التي تهدف إلى تحسين تجربة المستخدم وتسهيل تسجيل العملاء الجدد.', links:[RES.task1_1]},
+        {code:'1.2', title:'رِواء أكاديمي', goal:'الدخول إلى موقع رِواء أكاديمي، وإكمال الكورس المطلوب بالكامل، والحصول على شهادة الإتمام بعد اجتيازه. يعرّف الكورس بكيفية عمل المنصة: تسجيل الحساب وإدارته، والبيع والشراء وإدارة المخزون، ولوحة التحكم.', links:[RES.task1_2]}
+      ]},
+
+    {type:'session', time:'13:30–15:00', title:'الجلسة التدريبية الثانية', subtitle:'دور موظف نجاح العملاء ورحلة العميل وجولة في البوابة',
+      parts:[
+        {h:'دور موظف نجاح العملاء: الشريك التشغيلي للتاجر', items:[
+          'دور يتجاوز مرحلة البيع، هدفه أن يحقق العميل أقصى قيمة ممكنة من النظام، وأن تستمر علاقته برِواء.',
+          '<b>كيف يعمل كشريك:</b> فهم أهداف العميل وتحويلها إلى إجراءات فعلية، والتوجيه الاستباقي بمراقبة الاستخدام والتدخل المبكر، ونقل صوت العميل لفريق التطوير.',
+          '<b>المسؤوليات الأساسية:</b> التهيئة (إعداد الحساب وإدخال المخزون وتفعيل نقاط البيع)، والتدريب (المتجر الإلكتروني، إدارة المخازن، الفوترة)، ومتابعة الأداء، وبناء علاقة طويلة الأجل.'
+        ], links:[RES.csmRole]},
+        {h:'رحلة العميل (Customer Journey)', items:[
+          'قبل أي تواصل مع العميل تُحدَّد المرحلة التي يمر بها، وتُدار كل حالة أو تذكرة ضمن سياق تلك المرحلة.',
+          '<span class="flow"><span class="fs">🚀 التفعيل Activation</span><span class="ar">←</span><span class="fs">🌱 تبنّي المنتج Adoption</span></span>',
+          '🔁 إذا توقف العميل عن الاستخدام في أي من المرحلتين يعود إلى المسار عبر مرحلة <b>إعادة التفعيل</b>.',
+          '📌 قد ترد الحالات (Cases) في أي لحظة وضمن أي مرحلة، وتُدار ضمن سياق المرحلة الحالية للعميل.'
+        ], links:[RES.portal]},
+        {h:'جولة في بوابة نجاح العملاء — كيف تصل إلى المعلومة؟', items:[
+          '<b>الدور والالتزامات:</b> تعريف الدور، ومعايير الالتزام: الجدول اليومي، التوثيق، التاج، المكالمة، المحادثات، إدارة الحالات.',
+          '<b>رحلة العميل:</b> المراحل الأساسية للعميل وقاعدة إدارة الحالات ضمن المرحلة.',
+          '<b>المصادر المعرفية:</b> مصنّفة حسب المرحلة: التفعيل، إعادة التفعيل، إدارة الحالات، برامج الدعم والحوافز، الباقات، وبقية المصادر.',
+          '<b>البرامج والأدوات:</b> CRM، Metabase، Maqsam، 3CX، Admin Panel، ومنصة الاقتراحات Frill.',
+          '<b>الالتزام والجودة:</b> معايير جودة التعامل مع العملاء المعتمدة في التقييم.',
+          '<b>قاعدة الاستخدام:</b> عند أي سؤال، يحدد الموظف أولاً مرحلة العميل، ثم يفتح القسم المقابل لها في البوابة.'
+        ], links:[RES.portal]},
+        {h:'الالتزام بالجدول اليومي والتحديثات', items:[
+          'الانضباط التشغيلي يبدأ من تنظيم الوقت ومتابعة القنوات الرسمية؛ فالمهام تختلف يومياً حسب أولويات العمل، والجدول اليومي هو المرجع الأساسي.',
+          '<b>القنوات المطلوب متابعتها على Slack:</b> <span class="mono">csm-team-update</span> القناة الرسمية لفريق نجاح العملاء، و<span class="mono">all-cs-members</span> قناة قسم نجاح العملاء بالكامل، إضافة إلى قناة تحديثات التدريب <span class="mono">webinar-training-csm</span>.',
+          '<b>المراجع:</b> الجدول اليومي، ولوحة الجدول اليومي في CRM، ولوحة محفظة العملاء (BOB) لمتابعة التفعيل.'
+        ], links:[RES.calendar]}
+      ]},
+
+    {type:'break', time:'15:00–16:00', title:'استراحة'},
+
+    {type:'task-free', time:'16:00–17:00', title:'تاسكات + التاسك الثابت',
+      tasks:[
+        {code:'1.3', title:'البدء في منصة رِواء', goal:'قراءة المقالات التالية من مركز المساعدة بتركيز، وتدوين أي استفسارات أو ملاحظات لمناقشتها لاحقاً:', items:[
+          'التسجيل في منصة رِواء.',
+          'المتطلبات الدنيا لتشغيل منصة رِواء.',
+          'كيفية البدء في منصة رِواء.',
+          'كيف تحصل على دعم الفوترة الإلكترونية.'
+        ], links:[RES.task1_3]},
+        {...FIXED, code:'1.4'}
+      ]},
+
+    {type:'closing', time:'17:00–18:00', title:'الجلسة التدريبية الثالثة — ختامية',
+      oral:[
+        'ما المقصود بأن موظف نجاح العملاء «شريك تشغيلي» للتاجر؟ اذكر ثلاثاً من مسؤولياته الأساسية.',
+        'كيف يعمل موظف نجاح العملاء كشريك للتاجر؟ وضّح المقصود بفهم الأهداف، والتوجيه الاستباقي، وصوت العميل.',
+        'لماذا يحدد الموظف مرحلة العميل في رحلته قبل أي تواصل معه؟',
+        'ما خطوات تسجيل عميل جديد في منصة رِواء، وما الذي تغيّر في عملية التسجيل والدخول؟'
+      ]}
+  ]
+},
+
+{
+  num:2, c:'--d2', t:'--d2t',
+  titleAr:'التفعيل من الاستلام حتى التشغيل', titleEn:'Activation Journey',
+  blocks:[
+    {type:'quiz', time:'09:00–09:30', title:'اختبار', note:'يغطي محتوى اليوم الأول', questions:[
+      'عرّف دور موظف نجاح العملاء كشريك تشغيلي، واذكر ثلاث مسؤوليات أساسية.',
+      'ما المقصود بأن دور موظف نجاح العملاء يتجاوز مرحلة البيع؟',
+      'لماذا تُدار الحالات (Cases) ضمن سياق المرحلة الحالية للعميل؟',
+      'ما المتطلبات الدنيا لتشغيل منصة رِواء؟',
+      'كيف يحصل العميل على دعم الفوترة الإلكترونية؟'
+    ]},
+
+    {type:'session', time:'09:30–11:00', title:'الجلسة التدريبية الأولى', subtitle:'مراحل التفعيل ومراحلها الفرعية',
+      parts:[
+        {h:'المسار الكامل', items:[
+          '<span class="flow"><span class="fs">CSM Handover</span><span class="ar">←</span><span class="fs">Inventory Checkup</span><span class="ar">←</span><span class="fs">Training</span><span class="ar">←</span><span class="fs">Business Readiness</span><span class="ar">←</span><span class="fs">Pre-Adoption</span><span class="ar">←</span><span class="fs">Adoption</span></span>'
+        ]},
+        {h:'1) استلام العميل — CSM Handover', items:[
+          'تسليم العميل من فريق المبيعات. يستلم الموظف ملف العميل ويراجع تفاصيل العقد، ويتواصل مع العميل <b>خلال 24 ساعة</b>، ويقدّم نفسه كنقطة تواصل رئيسية، ويحدد التوقعات، ويوثّق الحالة في CRM/Open CX.',
+          '<b>المراحل الفرعية:</b> Welcomed، No Response، Requested Refund، Handover is Done، At Risk، Business is Not Ready.'
+        ]},
+        {h:'2) فحص المخزون — Inventory Checkup', items:[
+          'التحقق من جاهزية بيانات المخزون: مراجعة اكتمالها، ومساعدة العميل على رفع المنتجات وتصنيفها، والتنسيق مع الفرق التقنية عند العوائق، وتنبيه العميل للنواقص.',
+          '<b>من المراحل الفرعية:</b> Awaiting Devices، Awaiting Client Action، Products Upload/Setup، Issue/Problem، Training Pending، Reverted to Sales، Checkup is Done.'
+        ]},
+        {h:'3) التدريب — Training', items:[
+          'تأهيل العميل وفريقه لاستخدام النظام، والتحقق من فهمه للخصائص الأساسية، وتوثيق نوع التدريب وتاريخه.',
+          '<b>من المراحل الفرعية:</b> Webinar Invitation Sent، Free 1-on-1، Paid 1-on-1، Free Field Visit، Training is Done.'
+        ]},
+        {h:'4) الجاهزية التجارية — Business Readiness', items:[
+          'تقييم الجاهزية التشغيلية والتقنية، وتحديد سبب التأخير بدقة، والتنسيق الداخلي لإزالة العوائق، ووضع جدول زمني واضح للجاهزية.',
+          '<b>من المراحل الفرعية:</b> Delayed by Customer، Missing Feature، Technical Issue، Using Different System، Delayed by Rewaapay، Delayed by Hardware، Setup is Incomplete.'
+        ]},
+        {h:'5) ما قبل التشغيل — Pre-Adoption، و6) التشغيل — Adoption', items:[
+          '<b>Pre-Adoption:</b> مراجعة شاملة للمراحل السابقة والتأكد من استيفاء شروط التشغيل وتحديد موعد الإطلاق الرسمي.',
+          '<b>Adoption:</b> أربعة مستويات نضج: Level 1 Adoption Started، Level 2 Daily Use، Level 3 Feature Activation، ثم Adopted.',
+          'يراقب الموظف الاستخدام عبر Metabase ومؤشرات Health Score، ويتدخل استباقياً عند انخفاض الاستخدام، ويحدّث سجلات محفظة العملاء باستمرار.',
+          '<b>مراحل فرعية مشتركة في كل المراحل:</b> Requested Refund وAt Risk.'
+        ], links:[RES.stages]},
+        {h:'قائمة المكالمة لكل مرحلة (Call Checklist)', items:[
+          '<b>HandOver:</b> التحقق من جاهزية النشاط، فهم نوعه وفروعه، طلب تحميل تطبيق «مساعد»، إرسال روابط التدريب ورفع المنتجات عبر الواتساب، تحديد التواصل التالي.',
+          '<b>Inventory:</b> التأكد من استلام رابط الرفع، متابعة التقدم، شرح الباركود والتكلفة، توضيح شمول الضريبة، تحديد المنتجات الخاصة (التبغ، الموزونة)، وتحديد موعد للإنجاز.',
+          '<b>Training:</b> التأكد من حضور التدريب، ومعالجة أسئلة ما بعده، وتحديد اجتماع Business Readiness.',
+          '<b>Biz Ready:</b> التأكد من عمل النظام على كل الأجهزة، وجاهزية الفريق، وصحة المنتجات والأسعار، وتحديد موعد الإطلاق الرسمي.'
+        ], links:[RES.callCheck]}
+      ]},
+
+    {type:'break-task', time:'11:00–13:30', title:'استراحة الظهر والصلاة + وقت حر للاطلاع + تاسكات',
+      review:'وقت حر لمراجعة صفحة مراحل التفعيل وقوائم المكالمة الخاصة بمراحل التفعيل.',
+      tasks:[
+        {code:'2.1', title:'المرحلة والمرحلة الفرعية', goal:'تحديد المرحلة الرئيسية والفرعية الصحيحة لكل عميل:', items:[
+          'عميل سُلِّم للتو من المبيعات، ولم يتواصل معه أحد بعد.',
+          'عميل بدأ رفع منتجاته لكنه ينتظر وصول الأجهزة.',
+          'عميل أُرسلت له دعوة الويبينار ولم يحضر بعد.',
+          'عميل جاهز تشغيلياً، لكن تفعيل رِواء باي لم يكتمل.',
+          'عميل يستخدم النظام يومياً منذ شهر وبدأ يفعّل خصائص إضافية.'
+        ]},
+        {code:'2.2', title:'قائمة مكالمة الاستلام', goal:'كتابة النقاط التي يغطيها الموظف في مكالمة HandOver مع عميل جديد، بالاستناد إلى قائمة HandOver في Call Checklist.'}
+      ]},
+
+    {type:'session', time:'13:30–15:00', title:'الجلسة التدريبية الثانية', subtitle:'أتمتة الإعداد ورفع المنتجات والتدريب والأجهزة',
+      parts:[
+        {h:'رحلة أتمتة الإعداد', items:[
+          '<span class="flow"><span class="fs">عميل جديد</span><span class="ar">←</span><span class="fs">رابط رفع المنتجات + رابط حجز التدريب</span><span class="ar">←</span><span class="fs">متابعة آلية</span><span class="ar">←</span><span class="fs">فتح مهمة للموظف</span><span class="ar">←</span><span class="fs">اتصال وتحديث الحالة</span><span class="ar">←</span><span class="fs">إغلاق المهمة</span></span>',
+          'هدف الأتمتة دعم تفعيل العميل <b>خلال 7 أيام</b>.',
+          '<b>مساران:</b> استباقي (يوضح الموظف للعميل أنه سيستلم الرابطين ويتابعه حتى التفعيل)، وتفاعلي (تُفتح مهمة في Zoho عند تفاعل العميل مع رسائل الأتمتة).',
+          '<b>أنواع المهام الستة:</b> طلب العميل التواصل مع الموظف، رد العميل على رسالة الأتمتة، توقيت الجلسة غير مناسب، عدم الاستجابة لحضور الويبينار، عدم وجود نشاط إعداد خلال 7 أيام، رقم واتساب غير قابل للوصول.',
+          '<b>الحالات:</b> Not Started، In Progress، Did not respond، Postponed by client، Cancelled، Pending، Completed.',
+          '<b>قواعد:</b> لا يوقف الموظف الأتمتة بنفسه (بموافقة قائد الفريق فقط)، وتُغلق المهمة بعد 3 أيام من عدم الرد في أوقات مختلفة، ويُوثَّق كل تواصل بملاحظة على الحساب، ويُخصَّص وقت يومي لمتابعة CSM Inbox.'
+        ], links:[RES.onboarding]},
+        {h:'رفع المنتجات', items:[
+          'الموظف لا يرفع المنتجات بنفسه؛ يفهم نوع النشاط بأسئلة محددة، ويختار القالب المناسب ويرسله ويشرحه، وينسّق مع فريق الرفع (مدة المكالمة التقديرية 3–7 دقائق).',
+          '<b>أسئلة الاستكشاف:</b> نوع النشاط، وجود فواتير سابقة، عدد الفروع، الربط مع المتجر الإلكتروني (سلة)، شمول الأسعار للضريبة، وجود منتجات تبغ، استخدام ميزان إلكتروني.',
+          '<b>القوالب الثمانية:</b> Fast Import، Bundle، Multi-variant، Bundle/Combo، Tracked، Restaurant، Supermarket، Pharmacy.',
+          '<b>نقاط التحقق الخمس في الملف:</b> اسم المنتج، SKU/باركود فريد، سعر التكلفة دون ضريبة، سعر البيع مع التحقق من شمول الضريبة، الكمية وتوزيعها على الفروع.',
+          '<b>الميزان الإلكتروني:</b> ميزان واحد لكل حساب، ولا توفّره الشركة ولا تبرمجه، والإعداد ينفّذه الدعم الفني.',
+          '<b>متابعة الطلب في CRM:</b> صفحة الحساب ← Related List ← Account Setup Data Upload (رقم الطلب، المسؤول عن الرفع، الملاحظات، والمنشن عند التصعيد).'
+        ], links:[RES.product]},
+        {h:'التدريب — قنوات وصول التدريب للعميل', items:[
+          'يصل رابط التدريب للعميل الجديد عبر الأتمتة والإعداد، أو تطبيق «مساعد»، أو بحجز مباشر من الموظف.',
+          '<b>الويبينار الأسبوعي:</b> لأي عميل قديم أو حالي دون حد لعدد المرات؛ يرسل الموظف رابط التسجيل أو يسجّل العميل بنفسه، ويصل رابط الزووم لبريد العميل.',
+          'إذا لم تناسب المواعيد العميل تُرسل له جلسة مسجلة تناسب نشاطه والوظائف التي يستخدمها.',
+          '<b>الجلسة الخاصة:</b> عن بُعد، يقدّمها الموظف بعد التنسيق مع قائد الفريق. لا زيارات ميدانية للتدريب إلا الزيارة المدفوعة في منطقة الرياض فقط.'
+        ], links:[RES.training, RES.webinarLive, RES.webinarDrive]},
+        {h:'الأجهزة', items:[
+          '<b>أسعار الأجهزة الجديدة:</b> المرجع عند طلب العميل شراء جهاز.',
+          '<b>تتبع شحنة الأجهزة:</b> لمعرفة حالة شحنة الأجهزة المرسلة للعميل، ويرتبط مباشرة بالمرحلة الفرعية Awaiting Devices وDelayed by Hardware.'
+        ], links:[RES.devicesPrice, RES.devicesTrack]}
+      ]},
+
+    {type:'break', time:'15:00–16:00', title:'استراحة'},
+
+    {type:'task-free', time:'16:00–17:00', title:'تاسكات + التاسك الثابت',
+      tasks:[
+        {code:'2.3', title:'مهام الأتمتة', goal:'تحديد نوع المهمة والحالة (Status) المناسبة لكل موقف:', items:[
+          'عميل رد على رسالة الأتمتة طالباً تأجيل موعد الجلسة التدريبية.',
+          'عميل مضى على تسجيله 8 أيام دون أي خطوة إعداد.',
+          'عميل لم يحضر الويبينار المجدول ولم يرد على ثلاث محاولات في أوقات مختلفة.'
+        ]},
+        {code:'2.4', title:'اختيار قالب رفع المنتجات', goal:'اختيار القالب المناسب لكل نشاط مع ذكر السبب:', items:[
+          'محل ملابس بمقاسات وألوان متعددة.',
+          'صيدلية تحتاج تتبع أرقام التشغيلات.',
+          'مطعم بقائمة طعام وإضافات.',
+          'محل خضار يستخدم ميزاناً إلكترونياً.'
+        ]},
+        FIXED
+      ]},
+
+    {type:'closing', time:'17:00–18:00', title:'الجلسة التدريبية الثالثة — ختامية',
+      oral:[
+        'اذكر مراحل التفعيل بالترتيب، ومستويات Adoption الأربعة.',
+        'خلال كم ساعة يتواصل الموظف مع العميل بعد استلامه من المبيعات؟',
+        'متى تُغلق مهمة الأتمتة؟ ومن يملك صلاحية إيقاف الأتمتة؟',
+        'ما نقاط التحقق الخمس في ملف رفع المنتجات؟',
+        'عميل لا تناسبه مواعيد الويبينار: ما البديل؟'
+      ]}
+  ]
+},
+
+{
+  num:3, c:'--d3', t:'--d3t',
+  titleAr:'أدوات العمل اليومية والتوثيق', titleEn:'Daily Tools, Documentation & Communication',
+  blocks:[
+    {type:'quiz', time:'09:00–09:30', title:'اختبار', note:'يغطي محتوى اليوم الثاني', questions:[
+      'اذكر مراحل التفعيل الست بالترتيب، ومرحلتين فرعيتين لمرحلة Business Readiness.',
+      'ما أنواع مهام الأتمتة الستة؟',
+      'ما دور الموظف في رفع المنتجات؟ وأين يتابع طلب الرفع في CRM؟',
+      'ما قنوات وصول رابط التدريب للعميل الجديد؟',
+      'متى تُسمح الزيارة الميدانية للتدريب؟'
+    ]},
+
+    {type:'session', time:'09:30–11:00', title:'الجلسة التدريبية الأولى', subtitle:'أنظمة بيانات العميل والالتزام بالتوثيق',
+      parts:[
+        {h:'نظام إدارة علاقات العملاء — CRM', items:[
+          'يجمع كل البيانات المتعلقة بالعميل ويربطها ويحلّلها: معلومات العميل، والتفاعلات مع ممثلي الشركة، والمشتريات، وطلبات الخدمة، والأصول، وعروض الأسعار؛ ليفهم الموظف ما حدث في كل نقطة تواصل.',
+          '<b>كيف يُستخدم:</b> صفحة حساب العميل (Account) هي نقطة البداية لأي تواصل، ومنها يصل الموظف إلى القوائم المرتبطة (Related List) مثل الفواتير والصفقات وطلبات رفع البيانات.'
+        ], links:[RES.crm]},
+        {h:'قاعدة بيانات العملاء — Metabase', items:[
+          'قاعدة البيانات لكل معلومات العملاء، وتنعكس بياناتها على حساب العميل في CRM.',
+          'من خلالها يتابع كل موظف محفظة عملائه (Book of Business — BOB)، ويراقب الاستخدام ومؤشرات Health Score.'
+        ], links:[RES.metabase]},
+        {h:'Admin Panel', items:[
+          'يُستخدم لإصدار فواتير Upselling للعميل، مثل شراء أجهزة أو إضافة موقع، أو للحصول على رابط الدخول لحساب العميل عند اللزوم.'
+        ], links:[RES.adminPanel]},
+        {h:'الالتزام بالتوثيق', items:[
+          'أي تواصل مع العميل غير موثّق في CRM يُعتبر كأنه لم يحدث.',
+          '<b>1) ملخص التواصل (Sentiment Summary):</b> ملخص واضح لكل مكالمة أو محادثة، مع إرفاق روابط المحادثات والتصعيدات ذات الصلة، دون تكرار.',
+          '<b>2) قيمة Sentiment:</b> <b>Positive</b> للعميل المُفعَّل النشط فعلياً (Health Score أخضر)، <b>Negative</b> لحالات استرجاع الأموال أو إغلاق النشاط، <b>Neutral</b> للعميل ذي Health Score الملوّن أو من يصعب الوصول إليه، و<b>Customer with low invoice volume</b> للنشاطات منخفضة الحركة.',
+          '<b>3) السبب الرئيسي والفرعي:</b> مثل Platform Experience، Hardware، Data Activation، Training، Technical Support، Sales Experience، Rewaapay، Business Status.',
+          '<b>4) تحديث Sub Stage</b> فوراً بعد كل تواصل لضمان دقة التقارير.',
+          '<b>5) إضافة Task</b> لأي التزام أو موعد لاحق.',
+          '<b>6) توثيق التصعيد</b> بإضافة منشن وروابط Slack أو المحادثات في Notes.'
+        ], links:[RES.documentation]}
+      ]},
+
+    {type:'break-task', time:'11:00–13:30', title:'استراحة الظهر والصلاة + وقت حر للاطلاع + تاسكات',
+      review:'وقت حر لتصفّح صفحة حساب عميل في CRM ولوحة Metabase، ومراجعة صفحة الالتزام بالتوثيق.',
+      tasks:[
+        {code:'3.1', title:'قيمة Sentiment المناسبة', goal:'تحديد قيمة Sentiment والسبب الرئيسي المناسب لكل موقف:', items:[
+          'عميل مُفعَّل يصدر فواتير يومية، وتواصل للاستفسار عن ميزة جديدة.',
+          'عميل طلب استرجاع المبلغ لأنه قرر إغلاق نشاطه.',
+          'عميل لم يرد على ثلاث محاولات اتصال، وHealth Score لديه برتقالي.',
+          'عميل تأخر تشغيله بسبب انتظار وصول الأجهزة.'
+        ]},
+        {code:'3.2', title:'صياغة ملخص التواصل', goal:'كتابة Sentiment Summary احترافي لمكالمة اتفق فيها الموظف مع العميل على موعد جلسة تدريب، مع تحديد Sub Stage وTask المتابعة.'}
+      ]},
+
+    {type:'session', time:'13:30–15:00', title:'الجلسة التدريبية الثانية', subtitle:'قنوات التواصل مع العميل: المكالمات والتاج والمحادثات',
+      parts:[
+        {h:'Maqsam و3CX', items:[
+          '<b>Maqsam</b> برنامج الاتصال المعتمد: يبدأ الاتصال منه، ويُحاول الموظف الاتصال ثلاث مرات عند عدم رد العميل قبل الانتقال لأي أداة أخرى، مع إضافة التاج المناسب على كل مكالمة.',
+          '<b>3CX</b> برنامج الاتصال الثاني: يُستخدم عند عدم رد العميل على Maqsam بعد ثلاث محاولات، أو بتوجيه من الإدارة.'
+        ], links:[RES.maqsam, RES.cx3]},
+        {h:'التاج — دليل التاج والالتزام به', items:[
+          'التاج الصحيح يصنّف التواصل ويحدد هدفه، ويحوّل كل مكالمة إلى بيانات تُبنى عليها لوحات المتابعة والتقارير.',
+          '<b>تاجات تلقائية:</b> يولّدها النظام بتحليل المكالمة، مثل No Answer وCall Connected.',
+          '<b>تاجات يدوية إلزامية حسب مرحلة العميل:</b> Activation (عميل جديد لم يبدأ الاستخدام)، Reactivation (عميل كان نشطاً وتوقف)، Maturity (عميل نشط ومستقر لزيادة استخدام الخصائص)، Cases، NPS، QBR، Grubtech، وReactivation - Q4 2026 للحملة المخصصة فقط.',
+          '<b>قواعد:</b> المكالمة بلا تاج يدوي تُعد عدم التزام، ويُضاف التاج أثناء المكالمة أو بعدها مباشرة، ويجوز إضافة أكثر من تاج.'
+        ], links:[RES.tagGuide, RES.tagging]},
+        {h:'الالتزام بالمكالمة — Call Checklist', items:[
+          '<b>الافتتاحية الموحّدة:</b> التحية، التعريف بالنفس كمدير حساب العميل في رِواء، السؤال عن الحال، والتأكد من أن وقت العميل يسمح.',
+          '<b>الختام الموحّد:</b> التأكد من وضوح كل شيء، وتأكيد رسالة الواتساب، وعرض أي مساعدة إضافية، والتذكير بساعات العمل.',
+          '<b>بعد كل مكالمة:</b> إضافة التاج، وتسجيل Sentiment والملاحظات، وتحديث Main Reason وSub Reason، وتحديث Substage، وإضافة Task للمتابعة، وفتح Case عند الحاجة لقسم آخر، والتصعيد للمدير عند اللزوم، وإرسال رسالة Open CX إذا لم يرد العميل.',
+          'تحتوي الصفحة على قائمة خاصة بكل مرحلة (HandOver، Inventory، Training، Biz Ready، Activation F/U، Reactivation، Cases، Grubtech، NPS).'
+        ], links:[RES.callCheck]},
+        {h:'المحادثات عبر Open CX', items:[
+          '<b>SLA:</b> الرد على آخر رسالة من العميل خلال مدة لا تتجاوز ساعة ونصف، وآخر رد في المحادثة يكون من الموظف.',
+          'إبقاء Open CX مفتوحاً طوال الدوام، وبدء اليوم وإنهاؤه بمراجعة المحادثات وإغلاقها.',
+          '<b>الإغلاق:</b> Resolved عند عدم انتظار رد العميل، وWaiting on customer عند انتظار رده؛ وكل خميس نهاية الدوام تُراجع محادثات Waiting on customer وتُغلق.',
+          '<b>التحويل:</b> مسموح فقط للدعم الفني، والدعم المحاسبي، والمحاسب الشخصي؛ بتغيير Inbox للقسم دون تعيين موظف محدد، مع ملاحظة واضحة بالمطلب.',
+          '<b>دليل الردود السريعة:</b> قائمة الردود الجاهزة داخل Open CX لتوحيد أسلوب التواصل.'
+        ], links:[RES.chat, RES.quickReplies]}
+      ]},
+
+    {type:'break', time:'15:00–16:00', title:'استراحة'},
+
+    {type:'task-free', time:'16:00–17:00', title:'تاسكات + التاسك الثابت',
+      tasks:[
+        {code:'3.3', title:'اختيار التاج اليدوي', goal:'تحديد التاج اليدوي المناسب لكل مكالمة:', items:[
+          'مكالمة مع عميل جديد لم يبدأ استخدام النظام بعد.',
+          'مكالمة مع عميل نشط ومستقر لتعريفه بخصائص لم يستخدمها.',
+          'مكالمة لمتابعة ربط تطبيقات التوصيل.',
+          'مكالمة لمتابعة تقييم العميل للخدمة.'
+        ]},
+        {code:'3.4', title:'سيناريوهات المحادثات', goal:'تحديد الإجراء الصحيح في Open CX لكل موقف:', items:[
+          'عميل أرسل رسالة منذ ساعة وعشرين دقيقة ولم يُرد عليه.',
+          'عميل يحتاج حلاً لمشكلة تقنية في جهاز نقطة البيع.',
+          'محادثة انتهت بطلب معلومة من العميل ولم يرسلها بعد.',
+          'تحوّلت المحادثة إلى اتصال هاتفي: ما الذي يوثّقه الموظف؟'
+        ]},
+        FIXED
+      ]},
+
+    {type:'closing', time:'17:00–18:00', title:'الجلسة التدريبية الثالثة — ختامية',
+      oral:[
+        'متى ينتقل الموظف من Maqsam إلى 3CX؟',
+        'ما الفرق بين Positive وNeutral وNegative في قيمة Sentiment؟',
+        'اذكر إجراءات ما بعد المكالمة بالترتيب.',
+        'إلى أي الأقسام يُسمح بتحويل المحادثة؟ وكيف يُحوّلها الموظف؟'
+      ]}
+  ]
+},
+
+{
+  num:4, c:'--d4', t:'--d4t',
+  titleAr:'الخدمات المالية وبرامج الدعم', titleEn:'Payments, Billing & Support Programs',
+  blocks:[
+    {type:'quiz', time:'09:00–09:30', title:'اختبار', note:'يغطي محتوى اليوم الثالث', questions:[
+      'ما الذي يُستخدم له كل من CRM وMetabase وAdmin Panel؟',
+      'اذكر الخطوات الست للالتزام بالتوثيق.',
+      'ما الفرق بين التاجات التلقائية واليدوية؟ ومتى يُضاف التاج اليدوي؟',
+      'ما معيار زمن الاستجابة (SLA) في Open CX؟ ومتى تُغلق المحادثة بحالة Resolved؟',
+      'كم محاولة اتصال عبر Maqsam قبل الانتقال لأداة أخرى؟'
+    ]},
+
+    {type:'session', time:'09:30–11:00', title:'الجلسة التدريبية الأولى', subtitle:'رِواء باي وفاتورة الاشتراك والباقات',
+      parts:[
+        {h:'رِواء باي — RewaaPay', items:[
+          'خدمة قبول مدفوعات متكاملة (مدى وفيزا/ماستركارد) مع مزامنة تلقائية بين منصة رِواء وجهاز الدفع.',
+          '<b>طرق التفعيل الثلاث:</b> تطبيق Rewaa Cashier على جهاز أندرويد يدعم NFC، أو ربط جهاز الدفع بالمنصة عبر المتصفح، أو تطبيق رِواء باي المستقل.',
+          '<span class="flow"><span class="fs">المبيعات — العرض والفاتورة</span><span class="ar">←</span><span class="fs">جيديا — المستندات ونقطة Nearpay</span><span class="ar">←</span><span class="fs">CRM — ربط التاجر</span><span class="ar">←</span><span class="fs">التدريب — فيديو التفعيل</span></span>',
+          '<b>المستندات:</b> السجل التجاري، شهادة الآيبان مختومة، رقم جوال المالك، رقم هوية المالك، والرخصة البلدية إن وجدت.',
+          '<b>متابعة الصفقة في CRM:</b> Account ← Deal ← Related List (Pipeline: Geidea، Layout: Payment Layout)، وعمود Stage يوضح الحالة الحالية.',
+          '<b>⚠️ تنبيه:</b> لا تُفتح تذكرة تفعيل رِواء باي إطلاقاً والصفقة في مرحلة New أو Communication؛ يُوجَّه العميل لتطبيق التاجر لرفع المستندات.',
+          '<b>عند وجود صفقة دفع:</b> يحدد الموظف Deal Owner من سجل الصفقة، ويبلغ العميل بأنه سيتواصل معه عبر الواتساب لطلب المستندات.'
+        ], links:[RES.rewaaPay]},
+        {h:'فاتورة الاشتراك', items:[
+          'السجل الرسمي لاشتراك العميل: الباقة، الإضافات، طريقة الدفع، وتفاصيل البنود المفوترة.',
+          '<b>وصول العميل:</b> من المنصة عبر الإعدادات ← الاشتراك ← تبويب سجل الفواتير، أو من تطبيق «مساعد».',
+          '<b>وصول الموظف:</b> صفحة حساب العميل في CRM ← Related List ← Invoices، ثم فتح الفاتورة لمراجعة البنود.'
+        ], links:[RES.invoice]},
+        {h:'الباقات', items:[
+          'روابط الباقات الحالية والقديمة لمراجعة خصائص كل باقة عند التعامل مع العميل: باقات رِواء، باقات مزايا ومنشآت، والباقات القديمة كمرجع لخصائص باقات العملاء السابقين.'
+        ], links:[RES.pkgRewaa, RES.pkgMazaya, RES.pkgOld]}
+      ]},
+
+    {type:'break-task', time:'11:00–13:30', title:'استراحة الظهر والصلاة + وقت حر للاطلاع + تاسكات',
+      review:'وقت حر لمراجعة دليل رِواء باي ودليل فاتورة الاشتراك وملفات الباقات.',
+      tasks:[
+        {code:'4.1', title:'سيناريوهات رِواء باي', goal:'تحديد الإجراء الصحيح لكل موقف:', items:[
+          'صفقة العميل في مرحلة Communication ويطلب فتح تذكرة تفعيل.',
+          'عميل يسأل عن المستندات المطلوبة للتفعيل.',
+          'عميل يريد معرفة حالة طلبه الحالية.'
+        ]},
+        {code:'4.2', title:'فاتورة الاشتراك والباقة', goal:'الوصول في CRM إلى فاتورة اشتراك عميل تجريبي، واستخراج الباقة والإضافات منها، ثم مطابقة خصائص الباقة من ملف الباقات، وكتابة خطوات إرشاد العميل للوصول إلى فاتورته بنفسه.'}
+      ]},
+
+    {type:'session', time:'13:30–15:00', title:'الجلسة التدريبية الثانية', subtitle:'Grubtech وبرامج الدعم والحوافز ومنصة الاقتراحات',
+      parts:[
+        {h:'ربط تطبيقات التوصيل — Grubtech', items:[
+          'ربط عدة تطبيقات توصيل بمنصة رِواء من جهاز واحد بالشراكة مع Grubtech.',
+          '<b>توزيع الأدوار:</b> موظف نجاح العملاء (التواصل وجمع الملف ومراجعته)، وفريق Products Onboarding (استلام الملف ورفع التيكت)، وGrubtech (الإعداد الكامل).',
+          '<b>العميل الجديد:</b> التحقق من الاشتراك في CRM ضمن Invoices ← إرسال القالب الفارغ ← طلب Store ID لكل تطبيق ← التحقق من الملف ← التسليم لفريق Products Onboarding ← المتابعة حتى التفعيل.',
+          '<b>العميل الحالي:</b> إبلاغ العميل ← طلب ملف المنتجات من Products Onboarding برقم Data Collection ← إرساله للعميل لاستكماله ← التحقق ← التسليم.',
+          '<b>الملف ثلاث صفحات:</b> Store IDs، والمنيو، والإضافات. قبل التسليم يتحقق الموظف من Store ID لكل تطبيق، والصور، والأسماء بالعربية والإنجليزية، والأسعار، والسعرات لهنقرستيشن.',
+          'الأسعار داخلية للاطلاع فقط، ولا يفاوض الموظف العميل عليها.'
+        ], links:[RES.grubtech]},
+        {h:'برامج الدعم والحوافز', items:[
+          '<b>دعم الفوترة الإلكترونية (2,500 ريال):</b> رصيد دائن من هيئة الزكاة والضريبة والجمارك لمرة واحدة. أبرز الشروط: منشأة صغيرة أو متوسطة خاضعة للفوترة، إيرادات سنوية لا تتجاوز 3 ملايين ريال، سجل تجاري ساري، ولم تستفد سابقاً. المطلوب: فاتورة اشتراك رِواء (رقمها يبدأ بـ RW) ونموذج فاتورة إلكترونية.',
+          '<b>دعم مزايا — منشآت (1,500 ريال):</b> بالشراكة مع منشآت عبر منصة مزايا، مع خصم إضافي من رِواء. يبلغ الموظف عملاء القائمة برسالة التأكيد، ثم يتابع حالات تأكيد الاستلام بالاتصال وشرح الخطوات: الدخول عبر نفاذ ← لوحة التحكم ← تفاصيل الطلب ← تأكيد استلام الطلب. التأكيد شرط للاستفادة من الدعم.',
+          '<b>كاش باك رِواء:</b> رصيد يُستخدم داخل المنصة فقط، يُمنح في حملات مستهدفة، أو عند استيفاء شروط التفعيل، أو تعويضاً عن مشكلة تقنية. الاستحقاق بقرار من الإدارة فقط، ولا يمنحه الموظف بنفسه، والتفاصيل تُحدَّث في الاجتماع اليومي والقناة المخصصة.'
+        ], links:[RES.zatca, RES.monshaat, RES.cashback]},
+        {h:'منصة الاقتراحات — Frill', items:[
+          'يسجّل العميل الدخول ببيانات منصة رِواء، ويضيف اقتراحه أو يرفعه الموظف نيابة عنه، ثم يُقيَّم عبر قناة #new-ideas-frill، ويُنشر ويصل رابطه للعميل تلقائياً.',
+          '⚠️ لا تُقيَّم الفكرة أكثر من مرة؛ تقييمها مرتين يعني نشرها ووصول الرسالة للعميل مرتين.'
+        ], links:[RES.frill, RES.frillChannel]}
+      ]},
+
+    {type:'break', time:'15:00–16:00', title:'استراحة'},
+
+    {type:'task-free', time:'16:00–17:00', title:'تاسكات + التاسك الثابت',
+      tasks:[
+        {code:'4.3', title:'مراجعة ملف Grubtech', goal:'إعداد قائمة التحقق التي يراجعها الموظف في ملف عميل جديد مشترك في تطبيقَي توصيل قبل تسليمه لفريق Products Onboarding.'},
+        {code:'4.4', title:'البرنامج المناسب', goal:'تحديد البرنامج المناسب والإجراء المطلوب لكل عميل:', items:[
+          'عميل يسأل عن دعم هيئة الزكاة، وإيراداته السنوية مليونا ريال.',
+          'عميل من قائمة منشآت فُتحت له حالة تأكيد استلام.',
+          'عميل تعطّل استخدامه بسبب مشكلة تقنية ويطالب بتعويض.',
+          'عميل يقترح ميزة جديدة للمنصة.'
+        ]},
+        FIXED
+      ]},
+
+    {type:'closing', time:'17:00–18:00', title:'الجلسة التدريبية الثالثة — ختامية',
+      oral:[
+        'متى يُمنع فتح تذكرة تفعيل رِواء باي؟ وما البديل؟',
+        'أين يجد الموظف فاتورة اشتراك العميل في CRM؟',
+        'ما الفرق بين خطوات Grubtech للعميل الجديد والعميل الحالي؟',
+        'ما شرط استفادة عميل منشآت من الدعم؟ ومن يقرر استحقاق الكاش باك؟'
+      ]}
+  ]
+},
+
+{
+  num:5, c:'--d5', t:'--d5t',
+  titleAr:'إعادة التفعيل والحالات والجودة', titleEn:'Reactivation, Cases & Quality',
+  blocks:[
+    {type:'quiz', time:'09:00–09:30', title:'اختبار', note:'يغطي محتوى اليوم الرابع', questions:[
+      'اذكر مسار تفعيل رِواء باي والمستندات المطلوبة.',
+      'كيف يصل العميل إلى فاتورة اشتراكه من المنصة؟',
+      'ما صفحات ملف Grubtech الثلاث؟',
+      'اذكر ثلاثة من شروط دعم الفوترة الإلكترونية.',
+      'لماذا لا تُقيَّم فكرة Frill أكثر من مرة؟'
+    ]},
+
+    {type:'session', time:'09:30–11:00', title:'الجلسة التدريبية الأولى', subtitle:'إعادة التفعيل وHealth Score',
+      parts:[
+        {h:'أساسيات إعادة التفعيل', items:[
+          'تواصل الموظف مع عميل كان نشطاً وتراجع Health Score لديه وانخفض إصداره للفواتير، لفهم السبب وإعادته للاستخدام.',
+          '<b>المُحفِّز:</b> تراجع Health Score إلى أصفر أو برتقالي أو أحمر بعد أن كان أخضر. <b>المقياس:</b> تاريخ آخر فاتورة أصدرها العميل.',
+          '<span class="flow"><span class="fs">نشط</span><span class="ar">←</span><span class="fs">تراجع النشاط</span><span class="ar">←</span><span class="fs">تواصل الموظف</span><span class="ar">←</span><span class="fs">تحديد السبب</span><span class="ar">←</span><span class="fs">إعادة التفعيل</span></span>'
+        ]},
+        {h:'ألوان Health Score حسب نوع النشاط (أيام منذ آخر فاتورة)', items:[
+          '<b>F&B:</b> أخضر ≤7 · أصفر 8–15 · برتقالي 16–30 · أحمر أكثر من 30.',
+          '<b>Retail:</b> أخضر ≤7 · أصفر 8–30 · برتقالي 31–60 · أحمر أكثر من 60.',
+          '<b>Service:</b> أخضر ≤7 · أصفر 8–45 · برتقالي 46–90 · أحمر أكثر من 90.',
+          '<b>عميل بلا فواتير:</b> Grey أقل من 90 يوماً من بداية الاشتراك، وBlack أكثر من 90 يوماً.'
+        ], links:[RES.reactivation]},
+        {h:'مكالمة إعادة التفعيل', items:[
+          '<b>من Call Checklist:</b> طرح انخفاض الاستخدام بلباقة، فهم أسباب التوقف، إبراز قيمة النظام، عرض مساعدة محددة كجلسة تدريب، تحديد خطوة واحدة واضحة، وتحديد موعد متابعة.',
+          '<b>التقييم (100 نقطة):</b> الافتتاحية 10، فهم وضع العميل 40، التوجيه والإجراء 35، الالتزام التشغيلي 15.'
+        ], links:[RES.callCheck]},
+        {h:'مصادر قيد الإطلاق', items:[
+          '<b>تقييم NPS العالمي:</b> مقياس استعداد العميل لترشيح رِواء، ومتوقف حالياً عن المتابعة في Open CX.',
+          '<b>SOP — إجراءات العمل الموحّدة:</b> مرجع الإجراءات لكل سيناريو، وسيُطلق قريباً في قسم «قريباً» في البوابة.'
+        ], links:[RES.nps, RES.sop]}
+      ]},
+
+    {type:'break-task', time:'11:00–13:30', title:'استراحة الظهر والصلاة + وقت حر للاطلاع + تاسكات',
+      review:'وقت حر لمراجعة دليل إعادة التفعيل وجداول ألوان Health Score.',
+      tasks:[
+        {code:'5.1', title:'لون Health Score', goal:'تحديد لون Health Score لكل عميل:', items:[
+          'مطعم آخر فاتورة له قبل 20 يوماً.',
+          'محل تجزئة آخر فاتورة له قبل 45 يوماً.',
+          'نشاط خدمي آخر فاتورة له قبل 50 يوماً.',
+          'عميل مشترك منذ 120 يوماً ولم يصدر أي فاتورة.'
+        ]},
+        {code:'5.2', title:'تقييم مقطع مكالمة', goal:'تقييم المقطع التالي حسب أقسام تقييم مكالمة إعادة التفعيل الأربعة، وتحديد نقاط القوة والنقص في كل قسم:', items:[
+          '«مرحباً، معك [الاسم] من رِواء. لاحظت أنه لا يوجد نشاط على حسابكم منذ فترة، وأردت الاطمئنان عليكم.» ... «للأسف ليس لدي وقت الآن.» ... «حسناً، سأتواصل معك غداً إن شاء الله، مع السلامة.»'
+        ]}
+      ]},
+
+    {type:'session', time:'13:30–15:00', title:'الجلسة التدريبية الثانية', subtitle:'إدارة الحالات (Cases)',
+      parts:[
+        {h:'التذكرة ومسارات فتحها', items:[
+          'التذكرة هي السجل الرسمي لأي تواصل أو مشكلة أو استفسار من العميل.',
+          '<b>فتح استباقي:</b> عندما تحتاج مشكلة العميل تدخلاً من قسم آخر. <b>تذاكر واردة:</b> تصل للموظف فيصنّفها ويحدد حالتها ويتابعها حتى الحل.'
+        ]},
+        {h:'الحقول السبعة الإلزامية والتصنيف الثلاثي', items:[
+          'Case Origin، Case Type (Complain / Request / Inquiry)، Description، Subject، Top Level (L1)، Sub Level (L2)، Secondary Level (L3 وقد يكون None).',
+          '<span class="flow"><span class="fs">Inventory Module</span><span class="ar">←</span><span class="fs">Return stock</span><span class="ar">←</span><span class="fs">How do I return stock?</span></span>',
+          'اختيار L1 وL2 بدقة يحدد الفريق المسؤول تلقائياً؛ والتصنيف الخاطئ يعني توجيهاً خاطئاً وتأخيراً.'
+        ], links:[RES.cases]},
+        {h:'دورة حالة التذكرة', items:[
+          '<b>New:</b> تواصل فوري، وتُحوَّل إلى Cancel إن فُتحت خطأ أو لا تخص الفريق. <b>Open:</b> بانتظار قسم آخر مع كتابة اسمه في الملاحظات ومتابعة منتظمة. <b>In Progress:</b> متابعة يومية وملاحظة مع كل خطوة. <b>Pending:</b> بانتظار العميل وفق بروتوكول المحاولات الثلاث. <b>Resolved:</b> تم الحل، مع إبلاغ العميل باستبيان الرضا.',
+          '<b>قاعدة الخميس–الأحد:</b> نهاية دوام الخميس تتحول التذاكر Open إلى Pending، ويُستأنف العمل عليها صباح الأحد.'
+        ], links:[RES.caseFollow]},
+        {h:'الأخطاء العشرة الشائعة', items:[
+          'No Description، Wrong Case Type، Wrong Top Level، Wrong Secondary Level، Duplicate Case، Missing Customer Info، Case Over Existing Request، Wrong Product File، Missing Case Note، Late Follow-Up.',
+          '<b>قبل الإرسال:</b> نوع التذكرة ← Top Level ← Sub Level (لا يُترك على -None-) ← Secondary Level ← وصف واضح.',
+          '<b>قائمة مكالمة الحالات:</b> فهم الحالة وسياقها، مراجعة مرحلة العميل، خطوات حل واضحة، التنسيق مع الأقسام، تأكيد رسالة الرضا، والإغلاق الصحيح.'
+        ], links:[RES.cases, RES.callCheck]}
+      ]},
+
+    {type:'break', time:'15:00–16:00', title:'استراحة'},
+
+    {type:'task-free', time:'16:00–17:00', title:'تاسكات + التاسك الثابت',
+      tasks:[
+        {code:'5.3', title:'تصنيف التذاكر', goal:'تحديد Case Type وتسلسل Top/Sub Level تقريبي وكتابة Description لكل طلب:', items:[
+          'عميل يسأل لماذا لا يستطيع إرجاع كمية من منتج إلى المخزون.',
+          'عميل يشتكي من خصم غير صحيح في رِواء باي.',
+          'عميل يطلب تفعيل صلاحية لموظف جديد.'
+        ]},
+        {code:'5.4', title:'اكتشاف الأخطاء', goal:'تحديد نوع الخطأ في كل تذكرة:', items:[
+          'تذكرة وصفها نقطة واحدة.',
+          'تذكرتان لنفس الطلب في اليوم نفسه.',
+          'تذكرة Top Level صحيح وSub Level متروك على -None-.',
+          'تذكرة رفع منتجات مرفق بها ملف ناقص.'
+        ]},
+        FIXED
+      ]},
+
+    {type:'closing', time:'17:00–18:00', title:'الجلسة التدريبية الثالثة — ختامية عامة للبرنامج',
+      parts:[
+        {h:'معايير جودة التعامل مع العملاء — الإطار الذي يُقيَّم به كل ما سبق', items:[
+          '<b>Activation:</b> الافتتاحية 10 · فهم العميل 35 · التوجيه والإجراء 35 · الالتزام التشغيلي 20.',
+          '<b>Reactivation:</b> 10 · 40 · 35 · 15. <b>Case Handling:</b> 10 · 20 · 45 · 25.',
+          '<b>Chat Open CX:</b> الافتتاحية 20 · الاستجابة خلال ساعتين 15 · الالتزام بالإجراء 45 · حل المشكلة 20.',
+          '<b>⛔ الأخطاء الحرجة تُصفّر التقييم:</b> معلومة خاطئة، سلوك غير احترافي، تأخير الاستجابة لحالة عاجلة، تأخير التواصل مع عميل تفعيل أو إعادة تفعيل.',
+          '<b>⭐ نقاط إضافية حتى 15:</b> اكتشاف احتياج أو خطر استباقياً (+5)، تحقيق أول نجاح (+5)، متابعة استباقية إضافية (+3)، فرصة تحسين استخدام (+2).'
+        ], links:[RES.quality]}
+      ],
+      finalQuiz:[
+        'ما أول خطوة قبل أي تواصل مع العميل؟ وأين يجد الموظف المصدر المناسب في البوابة؟',
+        'اذكر إجراءات ما بعد المكالمة كاملة.',
+        'اذكر مراحل التفعيل ومستويات Adoption.',
+        'ما المحفّز والمقياس في إعادة التفعيل؟',
+        'ما الحقول السبعة الإلزامية للتذكرة؟ وما قاعدة الخميس–الأحد؟',
+        'ما الأخطاء الحرجة التي تصفّر تقييم المكالمة؟'
+      ],
+      oral:[
+        'عميل Retail آخر فاتورة له قبل 35 يوماً: ما لونه؟ وما التاج المناسب للمكالمة؟',
+        'تذكرة بحالة Pending: ما بروتوكول المتابعة قبل تحويلها إلى Resolved؟',
+        'ما أوزان أقسام تقييم Case Handling؟',
+        'ما الذي يميّز تقييم المحادثات عن تقييم المكالمات؟'
+      ]}
+  ]
+}
+];
+
+const linkBtns = (arr, style='') => arr && arr.length
+  ? `<div class="link-row" ${style}>${arr.map(l=>`<a class="link-btn" href="${l.url}" target="_blank" rel="noopener">🔗 ${l.label}</a>`).join('')}</div>` : '';
+
+const pathOf = l => `<div class="path">📍 <b>المسار:</b> البوابة ← ${l.path.join(' ← ')} ← ${l.label}</div>`;
+
+function renderPart(p){
+  const links = p.links || [];
+  return `<div class="part">
+    <h4>${p.h}</h4>
+    <ul class="pts">${p.items.map(i=>`<li>${i}</li>`).join('')}</ul>
+    ${links.filter(l=>l!==RES.portal).map(pathOf).join('')}
+    ${linkBtns(links)}
+  </div>`;
+}
+
+function renderTask(t){
+  const items = t.items && t.items.length ? `<ol class="scen">${t.items.map(i=>`<li>${i}</li>`).join('')}</ol>` : '';
+  const foot = (t.links && t.links.length) ? linkBtns(t.links,'style="margin-top:8px"') : `<span class="ph">🔗 رابط التاسك — يُضاف لاحقاً</span>`;
+  return `<div class="task-box ${t.fixed?'fixed-task':''}">
+    <div class="task-head"><span class="task-code">${t.code==='ثابت'?'ثابت':'تاسك '+t.code}</span><span class="task-title">${t.title}</span></div>
+    <p class="goal"><b>المطلوب:</b> ${t.goal}</p>
+    ${items}${foot}
+  </div>`;
+}
+
+function renderBlock(b, d){
+  if(b.type==='quiz'){
+    return `<div class="block" style="--block-c:var(--amber)">
+      <div class="block-top"><span class="block-time">${b.time}</span><span class="block-kind" style="--chip-bg:var(--amber-tint);--chip-c:var(--amber-ink)">📝 اختبار</span></div>
+      <h3>${b.title}</h3><p class="lead">${b.note}</p>
+      <div class="quiz-box"><ol>${b.questions.map(q=>`<li>${q}</li>`).join('')}</ol></div>
+      <span class="ph">🔗 رابط الاختبار — يُضاف لاحقاً</span>
+    </div>`;
+  }
+  if(b.type==='session'){
+    return `<div class="block" style="--block-c:var(${d.c})">
+      <div class="block-top"><span class="block-time">${b.time}</span><span class="block-kind" style="--chip-bg:var(${d.t});--chip-c:var(${d.c})">🎓 جلسة تدريبية</span></div>
+      <h3>${b.title}</h3><p class="lead">${b.subtitle}</p>
+      ${b.parts.map(renderPart).join('')}
+    </div>`;
+  }
+  if(b.type==='break-task' || b.type==='task-free'){
+    const kind = b.type==='break-task' ? '🍽️ استراحة + مراجعة + تاسكات' : '✍️ تاسكات + وقت حر';
+    return `<div class="block" style="--block-c:var(--purple)">
+      <div class="block-top"><span class="block-time">${b.time}</span><span class="block-kind" style="--chip-bg:var(--purple-tint);--chip-c:var(--purple-ink)">${kind}</span></div>
+      <h3>${b.title}</h3>
+      ${b.review?`<div class="review-note">🗒️ ${b.review}</div>`:''}
+      <div class="task-stack">${b.tasks.map(renderTask).join('')}</div>
+    </div>`;
+  }
+  if(b.type==='break'){
+    return `<div class="block" style="--block-c:#9c96a8">
+      <div class="block-top"><span class="block-time">${b.time}</span><span class="block-kind">☕ استراحة</span></div>
+      <h3>${b.title}</h3>
+    </div>`;
+  }
+  if(b.type==='closing'){
+    const parts = b.parts ? b.parts.map(renderPart).join('') : '';
+    const fq = b.finalQuiz ? `<div class="final-quiz"><h4>📝 الاختبار الختامي الشامل</h4><ol>${b.finalQuiz.map(q=>`<li>${q}</li>`).join('')}</ol><span class="ph">🔗 رابط الاختبار الختامي — يُضاف لاحقاً</span></div>` : '';
+    return `<div class="block" style="--block-c:var(${d.c})">
+      <div class="block-top"><span class="block-time">${b.time}</span><span class="block-kind" style="--chip-bg:var(${d.t});--chip-c:var(${d.c})">🏁 الجلسة الثالثة — ختامية + شفهي</span></div>
+      <h3>${b.title}</h3>
+      ${parts}${fq}
+      <div class="oral-box">
+        <p class="lead">مراجعة ونقاش، ثم اختبار شفهي، ثم الإجابة عن الأسئلة والاستفسارات الناتجة عن تطبيق الويبينار أو محتوى اليوم. أسئلة مقترحة للاختبار الشفهي:</p>
+        <ul>${b.oral.map(q=>`<li>${q}</li>`).join('')}</ul>
+      </div>
+    </div>`;
+  }
+  return '';
+}
+
+function render(){
+  let tasks=0, quizzes=0, sessions=0;
+  DAYS.forEach(d=>d.blocks.forEach(b=>{
+    if(b.tasks) tasks += b.tasks.length;
+    if(b.type==='quiz') quizzes++;
+    if(b.finalQuiz) quizzes++;
+    if(b.type==='session'||b.type==='closing') sessions++;
+  }));
+  document.getElementById('stats').innerHTML = [
+    [DAYS.length,'أيام تدريب'],[sessions,'جلسة تدريبية (3 يومياً)'],[tasks,'تاسكاً (منها الويبينار يومياً)'],[quizzes,'اختبارات'],[DAYS.length,'اختبارات شفهية']
+  ].map(([n,l])=>`<div class="stat"><b>${n}</b><span>${l}</span></div>`).join('');
+
+  const tabsEl=document.getElementById('dayTabs'), panelsEl=document.getElementById('dayPanels');
+  tabsEl.innerHTML = DAYS.map((d,i)=>`<button type="button" class="day-tab ${i===0?'active':''}" data-idx="${i}" style="--dc:var(${d.c});--dt:var(${d.t})"><span class="num">${d.num}</span><span class="lbl">${d.titleAr}</span></button>`).join('');
+  panelsEl.innerHTML = DAYS.map((d,i)=>`<section class="day-panel ${i===0?'active':''}" data-idx="${i}" style="--dc:var(${d.c});--dt:var(${d.t})">
+      <div class="day-head"><span class="badge">${d.num}</span><div><h2>اليوم ${d.num}: ${d.titleAr}</h2><p class="sub">${d.titleEn}</p></div></div>
+      <div class="timeline">${d.blocks.map(b=>renderBlock(b,d)).join('')}</div>
+    </section>`).join('');
+  tabsEl.querySelectorAll('.day-tab').forEach(btn=>btn.addEventListener('click',()=>{
+    const idx=btn.dataset.idx;
+    tabsEl.querySelectorAll('.day-tab').forEach(x=>x.classList.toggle('active',x===btn));
+    panelsEl.querySelectorAll('.day-panel').forEach(x=>x.classList.toggle('active',x.dataset.idx===idx));
+    window.scrollTo({top:tabsEl.offsetTop-10,behavior:'smooth'});
+  }));
+
+}
+render();
+</script>
