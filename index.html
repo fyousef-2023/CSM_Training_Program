@@ -395,6 +395,12 @@ const RES = {
   task2_2:{label:'تاسك 2.2 — Operational', url:'https://docs.google.com/document/d/19J4_2d48c70rqvXL6i-WfWuEvt9DQLe6zrtD0P_yZoc/edit?tab=t.0', path:[]},
   callsSheet:{label:'ملف المكالمات — Calls', url:'https://docs.google.com/spreadsheets/d/1Z5y57q6cJwwpk9cMq9AE3qbxu6cpEAWjPjdJkHD6N08/edit?gid=805631889#gid=805631889&range=A1', path:[]},
   taskWebinar2:{label:'تاسك الويبينار', url:'https://docs.google.com/document/d/1V30jeLai0CGyr0Qf6NfQuvpEkUl6yaDyrGKSs3pclGA/edit?tab=t.0', path:[]},
+  quiz3:{label:'رابط الاختبار', url:'https://forms.gle/w5ucUpwje5cvRtbw7', path:[]},
+  task3_1:{label:'تاسك 3.1 — Documentation', url:'https://docs.google.com/document/d/11U5X_Vp_-TfwvVeqT0JkgUWef-4kYfznsbWGQ7Wu8bo/edit?usp=sharing', path:[]},
+  task3_2:{label:'تاسك 3.2 — Documentation', url:'https://docs.google.com/document/d/1VK45LK3GpLmyVF-F4G26i4vQlo1pjAXEUCkqT2f_2ok/edit?usp=sharing', path:[]},
+  task3_3:{label:'تاسك 3.3 — Tag', url:'https://docs.google.com/document/d/1Hejvi2TJW90UDEihTRYraEwE-T_OpnThASicyNo2VUI/edit?usp=sharing', path:[]},
+  task3_4:{label:'تاسك 3.4 — Chat', url:'https://docs.google.com/document/d/1aQQ4qGKDRGL58S_3k9Bjqf_3u2k5svwUInj6XMoKv-U/edit?usp=sharing', path:[]},
+  taskWebinar3:{label:'تاسك الويبينار', url:'https://docs.google.com/document/d/1Hgie3_fllygX-p9iFXe28DjvYchVRjttRJkFmVfsNz8/edit?usp=sharing', path:[]},
   webinarLive:{label:'رابط التسجيل بالويبينار', url:'https://s.rewaa.com/webinars-training/', path:['المصادر المعرفية','التدريب','دليل التدريب الشامل']},
   webinarDrive:{label:'مجلد الجلسات المسجلة', url:'https://drive.google.com/drive/folders/1J9dUikBIglojA4HnFrphd-ZHBxc3OWUr', path:['المصادر المعرفية','التدريب','دليل التدريب الشامل']},
 };
@@ -629,7 +635,7 @@ const DAYS = [
       'ما دور الموظف في رفع المنتجات؟ وأين يتابع طلب الرفع في CRM؟',
       'ما قنوات وصول رابط التدريب للعميل الجديد؟',
       'متى تُسمح الزيارة الميدانية للتدريب؟'
-    ]},
+    ], links:[RES.quiz3]},
 
     {type:'session', time:'09:30–11:00', title:'الجلسة التدريبية الأولى', subtitle:'أنظمة بيانات العميل والالتزام بالتوثيق',
       parts:[
@@ -658,13 +664,13 @@ const DAYS = [
     {type:'break-task', time:'11:00–13:30', title:'استراحة الظهر والصلاة + وقت حر للاطلاع + تاسكات',
       review:'وقت حر لتصفّح صفحة حساب عميل في CRM ولوحة Metabase، ومراجعة صفحة الالتزام بالتوثيق.',
       tasks:[
-        {code:'3.1', title:'قيمة Sentiment المناسبة', goal:'تحديد قيمة Sentiment والسبب الرئيسي المناسب لكل موقف:', items:[
-          'عميل مُفعَّل يصدر فواتير يومية، وتواصل للاستفسار عن ميزة جديدة.',
+        {code:'3.1', title:'تحديد قيمة Sentiment والسبب', goal:'تطبيق معايير الالتزام بالتوثيق في اختيار قيمة Sentiment والسبب الرئيسي المناسب لكل تواصل. لكل موقف من المواقف التالية حدّد قيمة Sentiment والسبب الرئيسي (Main Reason)، مع تبرير الاختيار:', items:[
+          'عميل مُفعَّل يصدر فواتير يومية، وتواصل للاستفسار عن خاصية جديدة.',
           'عميل طلب استرجاع المبلغ لأنه قرر إغلاق نشاطه.',
           'عميل لم يرد على ثلاث محاولات اتصال، وHealth Score لديه برتقالي.',
           'عميل تأخر تشغيله بسبب انتظار وصول الأجهزة.'
-        ]},
-        {code:'3.2', title:'صياغة ملخص التواصل', goal:'كتابة Sentiment Summary احترافي لمكالمة اتفق فيها الموظف مع العميل على موعد جلسة تدريب، مع تحديد Sub Stage وTask المتابعة.'}
+        ], links:[RES.task3_1]},
+        {code:'3.2', title:'صياغة ملخص التواصل (Sentiment Summary)', goal:'لمكالمة اتفق فيها الموظف مع العميل على موعد جلسة تدريب: كتابة Sentiment Summary احترافي يوضح سبب التواصل وما تم الاتفاق عليه والخطوة التالية دون تكرار، وتحديد Sub Stage المناسبة، وإضافة Task للمتابعة بتاريخها ووصفها.', links:[RES.task3_2]}
       ]},
 
     {type:'session', time:'13:30–15:00', title:'الجلسة التدريبية الثانية', subtitle:'قنوات التواصل مع العميل: المكالمات والتاج والمحادثات',
@@ -698,19 +704,19 @@ const DAYS = [
 
     {type:'task-free', time:'16:00–17:00', title:'تاسكات + التاسك الثابت',
       tasks:[
-        {code:'3.3', title:'اختيار التاج اليدوي', goal:'تحديد التاج اليدوي المناسب لكل مكالمة:', items:[
+        {code:'3.3', title:'اختيار التاج اليدوي', goal:'تحديد التاج اليدوي المناسب لكل مكالمة، وتوضيح إن كانت تحتاج تاجاً إضافياً ولماذا:', items:[
           'مكالمة مع عميل جديد لم يبدأ استخدام النظام بعد.',
           'مكالمة مع عميل نشط ومستقر لتعريفه بخصائص لم يستخدمها.',
           'مكالمة لمتابعة ربط تطبيقات التوصيل.',
           'مكالمة لمتابعة تقييم العميل للخدمة.'
-        ]},
-        {code:'3.4', title:'سيناريوهات المحادثات', goal:'تحديد الإجراء الصحيح في Open CX لكل موقف:', items:[
+        ], links:[RES.task3_3]},
+        {code:'3.4', title:'سيناريوهات المحادثات عبر Open CX', goal:'كتابة الإجراء الصحيح في Open CX لكل موقف، مع توضيح ما يجب توثيقه (ملاحظة، حالة الإغلاق، القسم المحوَّل إليه):', items:[
           'عميل أرسل رسالة منذ ساعة وعشرين دقيقة ولم يُرد عليه.',
           'عميل يحتاج حلاً لمشكلة تقنية في جهاز نقطة البيع.',
           'محادثة انتهت بطلب معلومة من العميل ولم يرسلها بعد.',
-          'تحوّلت المحادثة إلى اتصال هاتفي: ما الذي يوثّقه الموظف؟'
-        ]},
-        FIXED
+          'تحوّلت المحادثة إلى اتصال هاتفي.'
+        ], links:[RES.task3_4]},
+        {...FIXED, code:'3.5', links:[RES.taskWebinar3, RES.webinarLive, RES.webinarDrive]}
       ]},
 
     {type:'closing', time:'17:00–18:00', title:'الجلسة التدريبية الثالثة — ختامية',
