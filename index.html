@@ -401,6 +401,12 @@ const RES = {
   task3_3:{label:'تاسك 3.3 — Tag', url:'https://docs.google.com/document/d/1Hejvi2TJW90UDEihTRYraEwE-T_OpnThASicyNo2VUI/edit?usp=sharing', path:[]},
   task3_4:{label:'تاسك 3.4 — Chat', url:'https://docs.google.com/document/d/1aQQ4qGKDRGL58S_3k9Bjqf_3u2k5svwUInj6XMoKv-U/edit?usp=sharing', path:[]},
   taskWebinar3:{label:'تاسك الويبينار', url:'https://docs.google.com/document/d/1Hgie3_fllygX-p9iFXe28DjvYchVRjttRJkFmVfsNz8/edit?usp=sharing', path:[]},
+  quiz4:{label:'رابط الاختبار', url:'https://forms.gle/3CauZA96gcwFpBqE6', path:[]},
+  task4_1:{label:'تاسك 4.1 — RewaaPay', url:'https://docs.google.com/document/d/1MmX7qD45rxYgY5K3rm3ukJMTuKVHn8fJLjtHrciwJqM/edit?usp=sharing', path:[]},
+  task4_2:{label:'تاسك 4.2 — Subscription', url:'https://docs.google.com/document/d/1fr3dq81OTJziW4Hnyl9auAWIIFk-1Y7wrpuapY8p030/edit?usp=sharing', path:[]},
+  task4_3:{label:'تاسك 4.3 — Grubtech', url:'https://docs.google.com/document/d/1e46OWCenVmryIjeVgB1cPrZ5SIMB5UlK0CA60Haui88/edit?usp=sharing', path:[]},
+  task4_4:{label:'تاسك 4.4 — Referrals & Rewards', url:'https://docs.google.com/document/d/1lRJLhXcTWq6EpZMfCXkvziMuCUvx6jDFwi15Kx_QHSM/edit?usp=sharing', path:[]},
+  taskWebinar4:{label:'تاسك الويبينار', url:'https://docs.google.com/document/d/1bOsIeMwkzJ2IVUc4iEbaCicykLHfssQTCIt0odml8_g/edit?usp=sharing', path:[]},
   webinarLive:{label:'رابط التسجيل بالويبينار', url:'https://s.rewaa.com/webinars-training/', path:['المصادر المعرفية','التدريب','دليل التدريب الشامل']},
   webinarDrive:{label:'مجلد الجلسات المسجلة', url:'https://drive.google.com/drive/folders/1J9dUikBIglojA4HnFrphd-ZHBxc3OWUr', path:['المصادر المعرفية','التدريب','دليل التدريب الشامل']},
 };
@@ -739,7 +745,7 @@ const DAYS = [
       'ما الفرق بين التاجات التلقائية واليدوية؟ ومتى يُضاف التاج اليدوي؟',
       'ما معيار زمن الاستجابة (SLA) في Open CX؟ ومتى تُغلق المحادثة بحالة Resolved؟',
       'كم محاولة اتصال عبر Maqsam قبل الانتقال لأداة أخرى؟'
-    ]},
+    ], links:[RES.quiz4]},
 
     {type:'session', time:'09:30–11:00', title:'الجلسة التدريبية الأولى', subtitle:'رِواء باي وفاتورة الاشتراك والباقات',
       parts:[
@@ -765,12 +771,12 @@ const DAYS = [
     {type:'break-task', time:'11:00–13:30', title:'استراحة الظهر والصلاة + وقت حر للاطلاع + تاسكات',
       review:'وقت حر لمراجعة دليل رِواء باي ودليل فاتورة الاشتراك وملفات الباقات.',
       tasks:[
-        {code:'4.1', title:'سيناريوهات رِواء باي', goal:'تحديد الإجراء الصحيح لكل موقف:', items:[
+        {code:'4.1', title:'سيناريوهات رِواء باي', goal:'فهم مسار تفعيل رِواء باي ومسؤولية كل طرف، والتعرّف على مكان صفقة الدفع في CRM (Account ← Deal ← Related List، وPipeline: Geidea)، ثم كتابة الإجراء الصحيح لكل موقف:', items:[
           'صفقة العميل في مرحلة Communication ويطلب فتح تذكرة تفعيل.',
           'عميل يسأل عن المستندات المطلوبة للتفعيل.',
           'عميل يريد معرفة حالة طلبه الحالية.'
-        ]},
-        {code:'4.2', title:'فاتورة الاشتراك والباقة', goal:'الوصول في CRM إلى فاتورة اشتراك عميل تجريبي، واستخراج الباقة والإضافات منها، ثم مطابقة خصائص الباقة من ملف الباقات، وكتابة خطوات إرشاد العميل للوصول إلى فاتورته بنفسه.'}
+        ], links:[RES.task4_1]},
+        {code:'4.2', title:'فاتورة الاشتراك والباقة', goal:'فتح حساب عميل تجريبي في CRM ← Related List ← Invoices، واستخراج الباقة والإضافات وطريقة الدفع من الفاتورة، ثم مطابقة خصائص الباقة من ملف الباقات، وكتابة خطوات وصول العميل إلى فاتورته بنفسه من المنصة ومن تطبيق «مساعد».', links:[RES.task4_2]}
       ]},
 
     {type:'session', time:'13:30–15:00', title:'الجلسة التدريبية الثانية', subtitle:'Grubtech وبرامج الدعم والحوافز ومنصة الاقتراحات',
@@ -798,14 +804,18 @@ const DAYS = [
 
     {type:'task-free', time:'16:00–17:00', title:'تاسكات + التاسك الثابت',
       tasks:[
-        {code:'4.3', title:'مراجعة ملف Grubtech', goal:'إعداد قائمة التحقق التي يراجعها الموظف في ملف عميل جديد مشترك في تطبيقَي توصيل قبل تسليمه لفريق Products Onboarding.'},
-        {code:'4.4', title:'البرنامج المناسب', goal:'تحديد البرنامج المناسب والإجراء المطلوب لكل عميل:', items:[
+        {code:'4.3', title:'مراجعة ملف Grubtech', goal:'إعداد قائمة التحقق التي يراجعها الموظف في ملف عميل جديد مشترك في تطبيقَي توصيل، لكل صفحة من صفحات الملف، وتحديد أهم نقطة يجب التأكد منها قبل تسليم الملف لفريق Products Onboarding:', items:[
+          'Store IDs',
+          'المنيو',
+          'الإضافات (Add-ons)'
+        ], links:[RES.task4_3]},
+        {code:'4.4', title:'برامج الدعم والحوافز', goal:'تحديد البرنامج المناسب والإجراء المطلوب لكل عميل، مع توضيح ما يملك الموظف تنفيذه بنفسه وما يحتاج قراراً أو جهة أخرى:', items:[
           'عميل يسأل عن دعم هيئة الزكاة، وإيراداته السنوية مليونا ريال.',
           'عميل من قائمة منشآت فُتحت له حالة تأكيد استلام.',
           'عميل تعطّل استخدامه بسبب مشكلة تقنية ويطالب بتعويض.',
           'عميل يقترح ميزة جديدة للمنصة.'
-        ]},
-        FIXED
+        ], links:[RES.task4_4]},
+        {...FIXED, code:'4.5', links:[RES.taskWebinar4, RES.webinarLive, RES.webinarDrive]}
       ]},
 
     {type:'closing', time:'17:00–18:00', title:'الجلسة التدريبية الثالثة — ختامية',
