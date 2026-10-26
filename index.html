@@ -407,6 +407,13 @@ const RES = {
   task4_3:{label:'تاسك 4.3 — Grubtech', url:'https://docs.google.com/document/d/1e46OWCenVmryIjeVgB1cPrZ5SIMB5UlK0CA60Haui88/edit?usp=sharing', path:[]},
   task4_4:{label:'تاسك 4.4 — Referrals & Rewards', url:'https://docs.google.com/document/d/1lRJLhXcTWq6EpZMfCXkvziMuCUvx6jDFwi15Kx_QHSM/edit?usp=sharing', path:[]},
   taskWebinar4:{label:'تاسك الويبينار', url:'https://docs.google.com/document/d/1bOsIeMwkzJ2IVUc4iEbaCicykLHfssQTCIt0odml8_g/edit?usp=sharing', path:[]},
+  quiz5:{label:'رابط الاختبار', url:'https://forms.gle/7aoGvE8MWnQAiwhw6', path:[]},
+  quizFinal:{label:'رابط الاختبار الختامي', url:'https://forms.gle/xhzNCmyHijtt7tdZ6', path:[]},
+  task5_1:{label:'تاسك 5.1 — Health Score', url:'https://docs.google.com/document/d/1xp8be1ZUCfT6RsNq3is7hKUguGJdGiU5I8sf9RDlVds/edit?usp=sharing', path:[]},
+  task5_2:{label:'تاسك 5.2 — Reactivation', url:'https://docs.google.com/document/d/1QwWXcaOs8q2Buk5mQT7T72x6V6x9JatbLXsuXjLA8z4/edit?usp=sharing', path:[]},
+  task5_3:{label:'تاسك 5.3 — Cases', url:'https://docs.google.com/document/d/1XTQSKFnlrP5OwVVSadm3uPKoqty2L-nmaZga80EFMDg/edit?usp=sharing', path:[]},
+  task5_4:{label:'تاسك 5.4 — Cases', url:'https://docs.google.com/document/d/1KPgS2LdN7cuTF4E4C6V2AGY32NuxxWeEY3rXBQE_Fr8/edit?usp=sharing', path:[]},
+  taskWebinar5:{label:'تاسك الويبينار', url:'https://docs.google.com/document/d/1Vy8wUHiGyvs-b6OxuH9NRWYbhE4BItznatNABe0PB9g/edit?usp=sharing', path:[]},
   webinarLive:{label:'رابط التسجيل بالويبينار', url:'https://s.rewaa.com/webinars-training/', path:['المصادر المعرفية','التدريب','دليل التدريب الشامل']},
   webinarDrive:{label:'مجلد الجلسات المسجلة', url:'https://drive.google.com/drive/folders/1J9dUikBIglojA4HnFrphd-ZHBxc3OWUr', path:['المصادر المعرفية','التدريب','دليل التدريب الشامل']},
 };
@@ -838,7 +845,7 @@ const DAYS = [
       'ما صفحات ملف Grubtech الثلاث؟',
       'اذكر ثلاثة من شروط دعم الفوترة الإلكترونية.',
       'لماذا لا تُقيَّم فكرة Frill أكثر من مرة؟'
-    ]},
+    ], links:[RES.quiz5]},
 
     {type:'session', time:'09:30–11:00', title:'الجلسة التدريبية الأولى', subtitle:'إعادة التفعيل وHealth Score',
       parts:[
@@ -866,15 +873,15 @@ const DAYS = [
     {type:'break-task', time:'11:00–13:30', title:'استراحة الظهر والصلاة + وقت حر للاطلاع + تاسكات',
       review:'وقت حر لمراجعة دليل إعادة التفعيل وجداول ألوان Health Score.',
       tasks:[
-        {code:'5.1', title:'لون Health Score', goal:'تحديد لون Health Score لكل عميل:', items:[
+        {code:'5.1', title:'تحديد لون Health Score', goal:'قراءة Health Score حسب نوع النشاط التجاري: تحديد لون Health Score لكل عميل، ثم ترتيب العملاء الأربعة حسب أولوية التواصل مع ذكر السبب:', items:[
           'مطعم آخر فاتورة له قبل 20 يوماً.',
           'محل تجزئة آخر فاتورة له قبل 45 يوماً.',
           'نشاط خدمي آخر فاتورة له قبل 50 يوماً.',
           'عميل مشترك منذ 120 يوماً ولم يصدر أي فاتورة.'
-        ]},
-        {code:'5.2', title:'تقييم مقطع مكالمة', goal:'تقييم المقطع التالي حسب أقسام تقييم مكالمة إعادة التفعيل الأربعة، وتحديد نقاط القوة والنقص في كل قسم:', items:[
+        ], links:[RES.task5_1]},
+        {code:'5.2', title:'تقييم مكالمة إعادة تفعيل', goal:'تقييم المقطع التالي حسب الأقسام الأربعة (الافتتاحية، فهم وضع العميل، التوجيه والإجراء، الالتزام التشغيلي)، وتحديد نقطة قوة ونقطة تحتاج تحسين في كل قسم، ثم كتابة كيف كان يجب أن يتصرف الموظف عندما قال العميل إنه لا يملك وقتاً:', items:[
           '«مرحباً، معك [الاسم] من رِواء. لاحظت أنه لا يوجد نشاط على حسابكم منذ فترة، وأردت الاطمئنان عليكم.» ... «للأسف ليس لدي وقت الآن.» ... «حسناً، سأتواصل معك غداً إن شاء الله، مع السلامة.»'
-        ]}
+        ], links:[RES.task5_2]}
       ]},
 
     {type:'session', time:'13:30–15:00', title:'الجلسة التدريبية الثانية', subtitle:'إدارة الحالات (Cases)',
@@ -903,18 +910,18 @@ const DAYS = [
 
     {type:'task-free', time:'16:00–17:00', title:'تاسكات + التاسك الثابت',
       tasks:[
-        {code:'5.3', title:'تصنيف التذاكر', goal:'تحديد Case Type وتسلسل Top/Sub Level تقريبي وكتابة Description لكل طلب:', items:[
+        {code:'5.3', title:'تصنيف التذاكر (Cases)', goal:'تحديد Case Type وتسلسل Top/Sub Level تقريبي وكتابة Description لكل طلب:', items:[
           'عميل يسأل لماذا لا يستطيع إرجاع كمية من منتج إلى المخزون.',
           'عميل يشتكي من خصم غير صحيح في رِواء باي.',
           'عميل يطلب تفعيل صلاحية لموظف جديد.'
-        ]},
-        {code:'5.4', title:'اكتشاف الأخطاء', goal:'تحديد نوع الخطأ في كل تذكرة:', items:[
+        ], links:[RES.task5_3]},
+        {code:'5.4', title:'اكتشاف أخطاء التذاكر', goal:'تحديد نوع الخطأ في كل تذكرة، وكتابة الإجراء الصحيح الذي كان يجب اتباعه:', items:[
           'تذكرة وصفها نقطة واحدة.',
           'تذكرتان لنفس الطلب في اليوم نفسه.',
           'تذكرة Top Level صحيح وSub Level متروك على -None-.',
           'تذكرة رفع منتجات مرفق بها ملف ناقص.'
-        ]},
-        FIXED
+        ], links:[RES.task5_4]},
+        {...FIXED, code:'5.5', links:[RES.taskWebinar5, RES.webinarLive, RES.webinarDrive]}
       ]},
 
     {type:'closing', time:'17:00–18:00', title:'الجلسة التدريبية الثالثة — ختامية عامة للبرنامج',
@@ -935,6 +942,7 @@ const DAYS = [
         'ما الحقول السبعة الإلزامية للتذكرة؟ وما قاعدة الخميس–الأحد؟',
         'ما الأخطاء الحرجة التي تصفّر تقييم المكالمة؟'
       ],
+      finalLinks:[RES.quizFinal],
       oral:[
         'عميل Retail آخر فاتورة له قبل 35 يوماً: ما لونه؟ وما التاج المناسب للمكالمة؟',
         'تذكرة بحالة Pending: ما بروتوكول المتابعة قبل تحويلها إلى Resolved؟',
@@ -1003,7 +1011,7 @@ function renderBlock(b, d){
   }
   if(b.type==='closing'){
     const parts = b.parts ? b.parts.map(renderPart).join('') : '';
-    const fq = b.finalQuiz ? `<div class="final-quiz"><h4>📝 الاختبار الختامي الشامل</h4><ol>${b.finalQuiz.map(q=>`<li>${q}</li>`).join('')}</ol><span class="ph">🔗 رابط الاختبار الختامي — يُضاف لاحقاً</span></div>` : '';
+    const fq = b.finalQuiz ? `<div class="final-quiz"><h4>📝 الاختبار الختامي الشامل</h4><ol>${b.finalQuiz.map(q=>`<li>${q}</li>`).join('')}</ol>${b.finalLinks&&b.finalLinks.length?linkBtns(b.finalLinks,'style="margin-top:8px"'):'<span class="ph">🔗 رابط الاختبار الختامي — يُضاف لاحقاً</span>'}</div>` : '';
     return `<div class="block" style="--block-c:var(${d.c})">
       <div class="block-top"><span class="block-time">${b.time}</span><span class="block-kind" style="--chip-bg:var(${d.t});--chip-c:var(${d.c})">🏁 الجلسة الثالثة — ختامية + شفهي</span></div>
       <h3>${b.title}</h3>
